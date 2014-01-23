@@ -1,1 +1,431 @@
-{"device":"Audio","url":"http:\/\/makeprojects.com\/Project\/Simple+Laser+Communicator\/972\/1","guide":{"author":{"text":"Simon Quellen Field","userid":4047},"categories":["Audio","Spy"],"conclusion":"<p><strong>This project first appeared in <a href=\"http:\/\/makezine.com\/16\">MAKE Volume 16<\/a>, page 67.<\/strong><\/p>","difficulty":"Easy","documents":[],"flags":[{"title":"From MAKE Magazine","flagid":"FROM_MAKE","text":"This project first appeared on the pages of MAKE magazine."},{"title":"Weekend Project","flagid":"GUIDE_SPONSOR_RADIO_SHACK","text":"This project is part of RadioShack's The Great Create."}],"guideid":972,"image":{"imageid":17362,"text":"http:\/\/guide-images.makeprojects.org\/igi\/ewn1TNGXX6WFQeUy"},"introduction":"<p>How would you like to talk over a laser beam? In about 15 minutes you can set up your own laser communication system using a cheap laser pointer and a few parts from RadioShack. The audio signal from a microphone varies the power feeding the laser, so that its brightness changes, following the shape of the original sound wave. At the receiving end, a solar cell or photo-resistor converts the oscillating light signal back into the original sound.<\/p>\n\n<p>The communication is completely private, with no wire connection to tap into. Only you will be able hear what comes over the secret laser link.<\/p>\n\n<p>Check out more <a href=\"http:\/\/makeprojects.com\/Info\/Weekend_Projects\">Weekend Projects<\/a>.<\/p>","introduction_rendered":"<p>How would you like to talk over a laser beam? In about 15 minutes you can set up your own laser communication system using a cheap laser pointer and a few parts from RadioShack. The audio signal from a microphone varies the power feeding the laser, so that its brightness changes, following the shape of the original sound wave. At the receiving end, a solar cell or photo-resistor converts the oscillating light signal back into the original sound.<\/p>\n\n<p>The communication is completely private, with no wire connection to tap into. Only you will be able hear what comes over the secret laser link.<\/p>\n\n<p>Check out more <a href=\"http:\/\/makeprojects.com\/Info\/Weekend_Projects\">Weekend Projects<\/a>.<\/p><div class=\"parts\"><strong>Relevant parts<\/strong><ul><li><a href=\"http:\/\/makeprojects.com\/Item\/Laser_pointer\">Laser pointer<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=4356387\">Batteries<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2049742\">Wire<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2103254\">Transformer, audio output, 1k\u03a9 primary coil, 8\u03a9 secondary<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2102735\">Battery holder, 3 x AAA<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062660\">Alligator clip leads (2-10) with points fine enough to connect to the inside of the laser pointer<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062549\">LED, 2-lead bicolor<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2049745\">Wire, hookup, 22 gauge stranded<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062620\">Amplifier, mini, portable<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=3688990\">Microphone, with cable and plug<\/a><\/li><li><a href=\"http:\/\/shop.miniscience.com\/navigation\/detail.asp?MySessionID=352-745017428&amp;amp;id=CH905ST\">Crystal earphone<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=3897297\">Battery, 9V<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062218\">Snap connector for 9V battery<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062590\">Photoresistor, cadmium sulfide (CdS)<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2994583\">Resistor, 220\u03a9<\/a><\/li><\/ul><\/div><div class=\"tools\"><strong>Tools<\/strong><ul><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2103854\">Audio plug, 1\/8&amp;quot;, mono<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=3928375\">Helping Hands tool<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=3705831\">Radio, transistor<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062722\">Solder, lead-free<\/a><\/li><li><a href=\"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062728\">Soldering Iron, 15-Watt<\/a><\/li><\/ul><\/div>","locale":"en","parts":[{"text":"Laser pointer","notes":"You can get one for $10 from my Scitoys Catalog, scitoyscatalog.com.","url":"http:\/\/makeprojects.com\/Item\/Laser_pointer","thumbnail":""},{"text":"Batteries","notes":"from RadioShack. Get the same number of batteries and voltage that the laser takes, typically 3x 1.5V.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=4356387","thumbnail":""},{"text":"Wire","notes":"","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2049742","thumbnail":""},{"text":"Transformer, audio output, 1k\u03a9 primary coil, 8\u03a9 secondary","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2103254","thumbnail":""},{"text":"Battery holder, 3 x AAA","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2102735","thumbnail":""},{"text":"Alligator clip leads (2-10) with points fine enough to connect to the inside of the laser pointer","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062660","thumbnail":""},{"text":"LED, 2-lead bicolor","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062549","thumbnail":""},{"text":"Wire, hookup, 22 gauge stranded","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2049745","thumbnail":""},{"text":"Amplifier, mini, portable","notes":"from RadioShack. Or you can use a stereo system or larger amp.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062620","thumbnail":""},{"text":"Microphone, with cable and plug","notes":"from RadioShack. Or other mic with plug that fits your amp or stereo.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=3688990","thumbnail":""},{"text":"Crystal earphone","notes":"from MiniScience. Also known as Piezoelectric earphone.","url":"http:\/\/shop.miniscience.com\/navigation\/detail.asp?MySessionID=352-745017428&amp;id=CH905ST","thumbnail":""},{"text":"Battery, 9V","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=3897297","thumbnail":""},{"text":"Snap connector for 9V battery","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062218","thumbnail":""},{"text":"Photoresistor, cadmium sulfide (CdS)","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062590","thumbnail":""},{"text":"Resistor, 220\u03a9","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2994583","thumbnail":""}],"prereqs":[],"steps":[{"title":"Assemble the transmitter.","lines":[{"text":"It is recommend that you solder this project, but initially, it\u2019s easier to make it and test it out using alligator clip leads.","text_raw":"It is recommend that you solder this project, but initially, it\u2019s easier to make it and test it out using alligator clip leads.","bullet":"icon_note","level":0},{"text":"Remove the batteries from the laser. Connect the external battery pack to the laser\u2019s power contacts with 2 alligator clips. Usually you\u2019ll connect one lead to the battery case and the other to the spring inside.","text_raw":"Remove the batteries from the laser. Connect the external battery pack to the laser\u2019s power contacts with 2 alligator clips. Usually you\u2019ll connect one lead to the battery case and the other to the spring inside.","bullet":"black","level":0},{"text":"Some laser pointers are easy to disassemble; you can remove the circuit board and see the power contacts conveniently marked with a plus and a minus. If it doesn\u2019t light, try reversing the power;  this won\u2019t harm the laser.","text_raw":"Some laser pointers are easy to disassemble; you can remove the circuit board and see the power contacts conveniently marked with a plus and a minus. If it doesn\u2019t light, try reversing the power;  this won\u2019t harm the laser.","bullet":"black","level":0},{"text":"Figure out how to hold the laser\u2019s button down with a rubber band, wire, or tape.","text_raw":"Figure out how to hold the laser\u2019s button down with a rubber band, wire, or tape.","bullet":"black","level":0}],"object":null,"images":[{"imageid":26591,"orderby":1,"text":"http:\/\/guide-images.makeprojects.org\/igi\/DQILibxFBIODOMCB"},{"imageid":26592,"orderby":2,"text":"http:\/\/guide-images.makeprojects.org\/igi\/MTchRKRbEYmgPQF1"},{"imageid":17390,"orderby":3,"text":"http:\/\/guide-images.makeprojects.org\/igi\/TpVfIF5NrrKdK1bL"}],"number":1},{"title":"Connecting the LED.","lines":[{"text":"Remove the batteries. Following the schematic, connect the bicolor LED across the 1,000-ohm (1k\u03a9) side of the transformer. With the transformer shown here, this means connecting it to the green and blue wires. We don\u2019t need the tap wire (the black wire in between).","text_raw":"Remove the batteries. Following the schematic, connect the bicolor LED across the 1,000-ohm (1k\u03a9) side of the transformer. With the transformer shown here, this means connecting it to the green and blue wires. We don\u2019t need the tap wire (the black wire in between).","bullet":"black","level":0},{"text":"The LED protects the laser from high voltage spikes, since so many cheap lasers nowadays have no onboard protection circuit. If you see the LED flash, that indicates a spike.","text_raw":"The LED protects the laser from high voltage spikes, since so many cheap lasers nowadays have no onboard protection circuit. If you see the LED flash, that indicates a spike.","bullet":"black","level":1},{"text":"Since we're using a bicolor LED, we don't have to worry about polarity and can connect it either way.","text_raw":"Since we're using a bicolor LED, we don't have to worry about polarity and can connect it either way.","bullet":"black","level":1},{"text":"Connect the same two transformer leads in-line between the battery pack and the laser.","text_raw":"Connect the same two transformer leads in-line between the battery pack and the laser.","bullet":"black","level":0}],"object":null,"images":[{"imageid":17361,"orderby":1,"text":"http:\/\/guide-images.makeprojects.org\/igi\/DOopaGbowypSEEcw"},{"imageid":26595,"orderby":2,"text":"http:\/\/guide-images.makeprojects.org\/igi\/yaDeLsIcSFRtXMKZ"},{"imageid":26596,"orderby":3,"text":"http:\/\/guide-images.makeprojects.org\/igi\/hVGBRCdK2vKeSNJx"}],"number":2},{"title":"Finish up the transmitter.","lines":[{"text":"Connect two leads to the earphone plug. Unscrew the cover, solder leads to the plug terminals, and replace the cover.","text_raw":"Connect two leads to the earphone plug. Unscrew the cover, solder leads to the plug terminals, and replace the cover.","bullet":"black","level":0},{"text":"Connect the earphone plug to the 8\u03a9 side of the transformer using alligator clips.","text_raw":"Connect the earphone plug to the 8\u03a9 side of the transformer using alligator clips.","bullet":"black","level":0},{"text":"That\u2019s it! We have a laser transmitter, in just a few minutes!","text_raw":"That\u2019s it! We have a laser transmitter, in just a few minutes!","bullet":"black","level":0},{"text":"Plug the headphone plug into a transistor radio, which will be our signal source for testing.","text_raw":"Plug the headphone plug into a transistor radio, which will be our signal source for testing.","bullet":"black","level":0}],"object":null,"images":[{"imageid":26598,"orderby":1,"text":"http:\/\/guide-images.makeprojects.org\/igi\/YnxZEQNoKf1exTGu"},{"imageid":26597,"orderby":2,"text":"http:\/\/guide-images.makeprojects.org\/igi\/1GNQAQWDFOsgCGer"}],"number":3},{"title":"Assemble the receiver.","lines":[{"text":"For the receiver, connect a 9V battery across a cadmium sulfide (CdS) photoresistor and an earphone, so that battery, earphone, and photoresistor are all parallel.","text_raw":"For the receiver, connect a 9V battery across a cadmium sulfide (CdS) photoresistor and an earphone, so that battery, earphone, and photoresistor are all parallel.","bullet":"black","level":0},{"text":"The photocell changes its resistance proportional to the amount of light hitting it. Paired with a battery, this acts like a solar cell.","text_raw":"The photocell changes its resistance proportional to the amount of light hitting it. Paired with a battery, this acts like a solar cell.","bullet":"black","level":1},{"text":"Add a 220\u03a9 resistor in series with the battery to reduce power consumption and prevent heating of the photoresistor.","text_raw":"Add a 220\u03a9 resistor in series with the battery to reduce power consumption and prevent heating of the photoresistor.","bullet":"black","level":0}],"object":null,"images":[{"imageid":17395,"orderby":1,"text":"http:\/\/guide-images.makeprojects.org\/igi\/1aNDLNwuBQMOMGqU"},{"imageid":17397,"orderby":2,"text":"http:\/\/guide-images.makeprojects.org\/igi\/HDGPu3PtfUNFtXYQ"}],"number":4},{"title":"Set up and test.","lines":[{"text":"We\u2019ll test the system by transmitting a radio signal and amplifying the receiver so we can hear it across the room. First, replace the earphone of your receiver with an audio plug (or just clip the audio plug to  the earphone wires), and plug it into an amp or stereo. Here we use a mini portable amplifier.","text_raw":"We\u2019ll test the system by transmitting a radio signal and amplifying the receiver so we can hear it across the room. First, replace the earphone of your receiver with an audio plug (or just clip the audio plug to  the earphone wires), and plug it into an amp or stereo. Here we use a mini portable amplifier.","bullet":"black","level":0},{"text":"With the radio off, plug in the transmitter. Turn up the volume on the amplifier until you hear a hiss, then turn it down until it isn\u2019t noticeable.","text_raw":"With the radio off, plug in the transmitter. Turn up the volume on the amplifier until you hear a hiss, then turn it down until it isn\u2019t noticeable.","bullet":"black","level":0},{"text":"With the lights low, aim the laser across the room so it hits the solar cell or photoresistor. You may hear some clicks or pops. Now turn on the radio and adjust its volume until you hear it across the room.","text_raw":"With the lights low, aim the laser across the room so it hits the solar cell or photoresistor. You may hear some clicks or pops. Now turn on the radio and adjust its volume until you hear it across the room.","bullet":"black","level":0},{"text":"If you don\u2019t hear it, try increasing the amp\u2019s volume before you turn up the radio. If you pull out the earphone plug, the radio should be just audible.","text_raw":"If you don\u2019t hear it, try increasing the amp\u2019s volume before you turn up the radio. If you pull out the earphone plug, the radio should be just audible.","bullet":"black","level":1},{"text":"Depending on your signal source, you also might want to reverse the transformer. Some devices,  like iPods, don\u2019t have enough power to drive 8\u03a9 speakers, so you should connect them across the 1k\u03a9 side. This arrangement will dim the laser, but won\u2019t affect its range much.","text_raw":"Depending on your signal source, you also might want to reverse the transformer. Some devices,  like iPods, don\u2019t have enough power to drive 8\u03a9 speakers, so you should connect them across the 1k\u03a9 side. This arrangement will dim the laser, but won\u2019t affect its range much.","bullet":"black","level":0},{"text":"When you can hear the radio, break the laser beam with your hand, and notice that the music stops. Try chopping up the audio with your fingers.","text_raw":"When you can hear the radio, break the laser beam with your hand, and notice that the music stops. Try chopping up the audio with your fingers.","bullet":"black","level":0}],"object":null,"images":[{"imageid":26600,"orderby":1,"text":"http:\/\/guide-images.makeprojects.org\/igi\/6TdpBKB6iZYXNvQH"},{"imageid":26602,"orderby":2,"text":"http:\/\/guide-images.makeprojects.org\/igi\/YpWouTFVAcw4G4Kd"},{"imageid":17393,"orderby":3,"text":"http:\/\/guide-images.makeprojects.org\/igi\/vfYsJmUUG5YMUbXc"}],"number":5},{"title":"Your laser com system is ready!","lines":[{"text":"To send secret voice  communications, move the amp from the receiver to the transmitter and plug in a mic. You\u2019re ready for the field; just be careful with the volume, to protect the laser.","text_raw":"To send secret voice  communications, move the amp from the receiver to the transmitter and plug in a mic. You\u2019re ready for the field; just be careful with the volume, to protect the laser.","bullet":"black","level":0}],"object":null,"images":[{"imageid":26601,"orderby":1,"text":"http:\/\/guide-images.makeprojects.org\/igi\/BSMlyHjrbICvjEUa"},{"imageid":26604,"orderby":2,"text":"http:\/\/guide-images.makeprojects.org\/igi\/tnGGXe4cvhLakQ2H"}],"number":6}],"subject":"","summary":"Talk in secret over your own private laser beam link.","time_required":"15 to 30 minutes","title":"Simple Laser Communicator","tools":[{"text":"Audio plug, 1\/8&quot;, mono","notes":"from RadioShack. One to fit your radio, and one to plug into the mini amp. (Instead of the mini amp, you can also plug into a stereo or larger amp, using an RCA or 1\/4&quot; audio plug, also available at RadioShack.)","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2103854","thumbnail":""},{"text":"Helping Hands tool","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=3928375","thumbnail":""},{"text":"Radio, transistor","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=3705831","thumbnail":""},{"text":"Solder, lead-free","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062722","thumbnail":""},{"text":"Soldering Iron, 15-Watt","notes":"from RadioShack.","url":"http:\/\/www.radioshack.com\/product\/index.jsp?productId=2062728","thumbnail":""}],"type":"project"},"guideid":"972"}
+{
+    "device": "Audio",
+    "url": "http://makeprojects.com/Project/Simple+Laser+Communicator/972/1",
+    "guide": {
+        "author": {
+            "text": "Simon Quellen Field",
+            "userid": 4047
+        },
+        "categories": [
+            "Audio",
+            "Spy"
+        ],
+        "conclusion": "<p><strong>This project first appeared in <a href=\"http://makezine.com/16\">MAKE Volume 16</a>, page 67.</strong></p>",
+        "difficulty": "Easy",
+        "documents": [],
+        "flags": [
+            {
+                "title": "From MAKE Magazine",
+                "flagid": "FROM_MAKE",
+                "text": "This project first appeared on the pages of MAKE magazine."
+            },
+            {
+                "title": "Weekend Project",
+                "flagid": "GUIDE_SPONSOR_RADIO_SHACK",
+                "text": "This project is part of RadioShack's The Great Create."
+            }
+        ],
+        "guideid": 972,
+        "image": {
+            "imageid": 17362,
+            "text": "http://guide-images.makeprojects.org/igi/ewn1TNGXX6WFQeUy"
+        },
+        "introduction": "<p>How would you like to talk over a laser beam? In about 15 minutes you can set up your own laser communication system using a cheap laser pointer and a few parts from RadioShack. The audio signal from a microphone varies the power feeding the laser, so that its brightness changes, following the shape of the original sound wave. At the receiving end, a solar cell or photo-resistor converts the oscillating light signal back into the original sound.</p>\n\n<p>The communication is completely private, with no wire connection to tap into. Only you will be able hear what comes over the secret laser link.</p>\n\n<p>Check out more <a href=\"http://makeprojects.com/Info/Weekend_Projects\">Weekend Projects</a>.</p>",
+        "introduction_rendered": "<p>How would you like to talk over a laser beam? In about 15 minutes you can set up your own laser communication system using a cheap laser pointer and a few parts from RadioShack. The audio signal from a microphone varies the power feeding the laser, so that its brightness changes, following the shape of the original sound wave. At the receiving end, a solar cell or photo-resistor converts the oscillating light signal back into the original sound.</p>\n\n<p>The communication is completely private, with no wire connection to tap into. Only you will be able hear what comes over the secret laser link.</p>\n\n<p>Check out more <a href=\"http://makeprojects.com/Info/Weekend_Projects\">Weekend Projects</a>.</p><div class=\"parts\"><strong>Relevant parts</strong><ul><li><a href=\"http://makeprojects.com/Item/Laser_pointer\">Laser pointer</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=4356387\">Batteries</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2049742\">Wire</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2103254\">Transformer, audio output, 1kΩ primary coil, 8Ω secondary</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2102735\">Battery holder, 3 x AAA</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062660\">Alligator clip leads (2-10) with points fine enough to connect to the inside of the laser pointer</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062549\">LED, 2-lead bicolor</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2049745\">Wire, hookup, 22 gauge stranded</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062620\">Amplifier, mini, portable</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3688990\">Microphone, with cable and plug</a></li><li><a href=\"http://shop.miniscience.com/navigation/detail.asp?MySessionID=352-745017428&amp;amp;id=CH905ST\">Crystal earphone</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3897297\">Battery, 9V</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062218\">Snap connector for 9V battery</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062590\">Photoresistor, cadmium sulfide (CdS)</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2994583\">Resistor, 220Ω</a></li></ul></div><div class=\"tools\"><strong>Tools</strong><ul><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2103854\">Audio plug, 1/8&amp;quot;, mono</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3928375\">Helping Hands tool</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3705831\">Radio, transistor</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062722\">Solder, lead-free</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062728\">Soldering Iron, 15-Watt</a></li></ul></div>",
+        "locale": "en",
+        "parts": [
+            {
+                "text": "Laser pointer",
+                "notes": "You can get one for $10 from my Scitoys Catalog, scitoyscatalog.com.",
+                "url": "http://makeprojects.com/Item/Laser_pointer",
+                "thumbnail": ""
+            },
+            {
+                "text": "Batteries",
+                "notes": "from RadioShack. Get the same number of batteries and voltage that the laser takes, typically 3x 1.5V.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=4356387",
+                "thumbnail": ""
+            },
+            {
+                "text": "Wire",
+                "notes": "",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2049742",
+                "thumbnail": ""
+            },
+            {
+                "text": "Transformer, audio output, 1kΩ primary coil, 8Ω secondary",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2103254",
+                "thumbnail": ""
+            },
+            {
+                "text": "Battery holder, 3 x AAA",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2102735",
+                "thumbnail": ""
+            },
+            {
+                "text": "Alligator clip leads (2-10) with points fine enough to connect to the inside of the laser pointer",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2062660",
+                "thumbnail": ""
+            },
+            {
+                "text": "LED, 2-lead bicolor",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2062549",
+                "thumbnail": ""
+            },
+            {
+                "text": "Wire, hookup, 22 gauge stranded",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2049745",
+                "thumbnail": ""
+            },
+            {
+                "text": "Amplifier, mini, portable",
+                "notes": "from RadioShack. Or you can use a stereo system or larger amp.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2062620",
+                "thumbnail": ""
+            },
+            {
+                "text": "Microphone, with cable and plug",
+                "notes": "from RadioShack. Or other mic with plug that fits your amp or stereo.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=3688990",
+                "thumbnail": ""
+            },
+            {
+                "text": "Crystal earphone",
+                "notes": "from MiniScience. Also known as Piezoelectric earphone.",
+                "url": "http://shop.miniscience.com/navigation/detail.asp?MySessionID=352-745017428&amp;id=CH905ST",
+                "thumbnail": ""
+            },
+            {
+                "text": "Battery, 9V",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=3897297",
+                "thumbnail": ""
+            },
+            {
+                "text": "Snap connector for 9V battery",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2062218",
+                "thumbnail": ""
+            },
+            {
+                "text": "Photoresistor, cadmium sulfide (CdS)",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2062590",
+                "thumbnail": ""
+            },
+            {
+                "text": "Resistor, 220Ω",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2994583",
+                "thumbnail": ""
+            }
+        ],
+        "prereqs": [],
+        "steps": [
+            {
+                "title": "Assemble the transmitter.",
+                "lines": [
+                    {
+                        "text": "It is recommend that you solder this project, but initially, it’s easier to make it and test it out using alligator clip leads.",
+                        "text_raw": "It is recommend that you solder this project, but initially, it’s easier to make it and test it out using alligator clip leads.",
+                        "bullet": "icon_note",
+                        "level": 0
+                    },
+                    {
+                        "text": "Remove the batteries from the laser. Connect the external battery pack to the laser’s power contacts with 2 alligator clips. Usually you’ll connect one lead to the battery case and the other to the spring inside.",
+                        "text_raw": "Remove the batteries from the laser. Connect the external battery pack to the laser’s power contacts with 2 alligator clips. Usually you’ll connect one lead to the battery case and the other to the spring inside.",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "Some laser pointers are easy to disassemble; you can remove the circuit board and see the power contacts conveniently marked with a plus and a minus. If it doesn’t light, try reversing the power;  this won’t harm the laser.",
+                        "text_raw": "Some laser pointers are easy to disassemble; you can remove the circuit board and see the power contacts conveniently marked with a plus and a minus. If it doesn’t light, try reversing the power;  this won’t harm the laser.",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "Figure out how to hold the laser’s button down with a rubber band, wire, or tape.",
+                        "text_raw": "Figure out how to hold the laser’s button down with a rubber band, wire, or tape.",
+                        "bullet": "black",
+                        "level": 0
+                    }
+                ],
+                "object": null,
+                "images": [
+                    {
+                        "imageid": 26591,
+                        "orderby": 1,
+                        "text": "http://guide-images.makeprojects.org/igi/DQILibxFBIODOMCB"
+                    },
+                    {
+                        "imageid": 26592,
+                        "orderby": 2,
+                        "text": "http://guide-images.makeprojects.org/igi/MTchRKRbEYmgPQF1"
+                    },
+                    {
+                        "imageid": 17390,
+                        "orderby": 3,
+                        "text": "http://guide-images.makeprojects.org/igi/TpVfIF5NrrKdK1bL"
+                    }
+                ],
+                "number": 1
+            },
+            {
+                "title": "Connecting the LED.",
+                "lines": [
+                    {
+                        "text": "Remove the batteries. Following the schematic, connect the bicolor LED across the 1,000-ohm (1kΩ) side of the transformer. With the transformer shown here, this means connecting it to the green and blue wires. We don’t need the tap wire (the black wire in between).",
+                        "text_raw": "Remove the batteries. Following the schematic, connect the bicolor LED across the 1,000-ohm (1kΩ) side of the transformer. With the transformer shown here, this means connecting it to the green and blue wires. We don’t need the tap wire (the black wire in between).",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "The LED protects the laser from high voltage spikes, since so many cheap lasers nowadays have no onboard protection circuit. If you see the LED flash, that indicates a spike.",
+                        "text_raw": "The LED protects the laser from high voltage spikes, since so many cheap lasers nowadays have no onboard protection circuit. If you see the LED flash, that indicates a spike.",
+                        "bullet": "black",
+                        "level": 1
+                    },
+                    {
+                        "text": "Since we're using a bicolor LED, we don't have to worry about polarity and can connect it either way.",
+                        "text_raw": "Since we're using a bicolor LED, we don't have to worry about polarity and can connect it either way.",
+                        "bullet": "black",
+                        "level": 1
+                    },
+                    {
+                        "text": "Connect the same two transformer leads in-line between the battery pack and the laser.",
+                        "text_raw": "Connect the same two transformer leads in-line between the battery pack and the laser.",
+                        "bullet": "black",
+                        "level": 0
+                    }
+                ],
+                "object": null,
+                "images": [
+                    {
+                        "imageid": 17361,
+                        "orderby": 1,
+                        "text": "http://guide-images.makeprojects.org/igi/DOopaGbowypSEEcw"
+                    },
+                    {
+                        "imageid": 26595,
+                        "orderby": 2,
+                        "text": "http://guide-images.makeprojects.org/igi/yaDeLsIcSFRtXMKZ"
+                    },
+                    {
+                        "imageid": 26596,
+                        "orderby": 3,
+                        "text": "http://guide-images.makeprojects.org/igi/hVGBRCdK2vKeSNJx"
+                    }
+                ],
+                "number": 2
+            },
+            {
+                "title": "Finish up the transmitter.",
+                "lines": [
+                    {
+                        "text": "Connect two leads to the earphone plug. Unscrew the cover, solder leads to the plug terminals, and replace the cover.",
+                        "text_raw": "Connect two leads to the earphone plug. Unscrew the cover, solder leads to the plug terminals, and replace the cover.",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "Connect the earphone plug to the 8Ω side of the transformer using alligator clips.",
+                        "text_raw": "Connect the earphone plug to the 8Ω side of the transformer using alligator clips.",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "That’s it! We have a laser transmitter, in just a few minutes!",
+                        "text_raw": "That’s it! We have a laser transmitter, in just a few minutes!",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "Plug the headphone plug into a transistor radio, which will be our signal source for testing.",
+                        "text_raw": "Plug the headphone plug into a transistor radio, which will be our signal source for testing.",
+                        "bullet": "black",
+                        "level": 0
+                    }
+                ],
+                "object": null,
+                "images": [
+                    {
+                        "imageid": 26598,
+                        "orderby": 1,
+                        "text": "http://guide-images.makeprojects.org/igi/YnxZEQNoKf1exTGu"
+                    },
+                    {
+                        "imageid": 26597,
+                        "orderby": 2,
+                        "text": "http://guide-images.makeprojects.org/igi/1GNQAQWDFOsgCGer"
+                    }
+                ],
+                "number": 3
+            },
+            {
+                "title": "Assemble the receiver.",
+                "lines": [
+                    {
+                        "text": "For the receiver, connect a 9V battery across a cadmium sulfide (CdS) photoresistor and an earphone, so that battery, earphone, and photoresistor are all parallel.",
+                        "text_raw": "For the receiver, connect a 9V battery across a cadmium sulfide (CdS) photoresistor and an earphone, so that battery, earphone, and photoresistor are all parallel.",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "The photocell changes its resistance proportional to the amount of light hitting it. Paired with a battery, this acts like a solar cell.",
+                        "text_raw": "The photocell changes its resistance proportional to the amount of light hitting it. Paired with a battery, this acts like a solar cell.",
+                        "bullet": "black",
+                        "level": 1
+                    },
+                    {
+                        "text": "Add a 220Ω resistor in series with the battery to reduce power consumption and prevent heating of the photoresistor.",
+                        "text_raw": "Add a 220Ω resistor in series with the battery to reduce power consumption and prevent heating of the photoresistor.",
+                        "bullet": "black",
+                        "level": 0
+                    }
+                ],
+                "object": null,
+                "images": [
+                    {
+                        "imageid": 17395,
+                        "orderby": 1,
+                        "text": "http://guide-images.makeprojects.org/igi/1aNDLNwuBQMOMGqU"
+                    },
+                    {
+                        "imageid": 17397,
+                        "orderby": 2,
+                        "text": "http://guide-images.makeprojects.org/igi/HDGPu3PtfUNFtXYQ"
+                    }
+                ],
+                "number": 4
+            },
+            {
+                "title": "Set up and test.",
+                "lines": [
+                    {
+                        "text": "We’ll test the system by transmitting a radio signal and amplifying the receiver so we can hear it across the room. First, replace the earphone of your receiver with an audio plug (or just clip the audio plug to  the earphone wires), and plug it into an amp or stereo. Here we use a mini portable amplifier.",
+                        "text_raw": "We’ll test the system by transmitting a radio signal and amplifying the receiver so we can hear it across the room. First, replace the earphone of your receiver with an audio plug (or just clip the audio plug to  the earphone wires), and plug it into an amp or stereo. Here we use a mini portable amplifier.",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "With the radio off, plug in the transmitter. Turn up the volume on the amplifier until you hear a hiss, then turn it down until it isn’t noticeable.",
+                        "text_raw": "With the radio off, plug in the transmitter. Turn up the volume on the amplifier until you hear a hiss, then turn it down until it isn’t noticeable.",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "With the lights low, aim the laser across the room so it hits the solar cell or photoresistor. You may hear some clicks or pops. Now turn on the radio and adjust its volume until you hear it across the room.",
+                        "text_raw": "With the lights low, aim the laser across the room so it hits the solar cell or photoresistor. You may hear some clicks or pops. Now turn on the radio and adjust its volume until you hear it across the room.",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "If you don’t hear it, try increasing the amp’s volume before you turn up the radio. If you pull out the earphone plug, the radio should be just audible.",
+                        "text_raw": "If you don’t hear it, try increasing the amp’s volume before you turn up the radio. If you pull out the earphone plug, the radio should be just audible.",
+                        "bullet": "black",
+                        "level": 1
+                    },
+                    {
+                        "text": "Depending on your signal source, you also might want to reverse the transformer. Some devices,  like iPods, don’t have enough power to drive 8Ω speakers, so you should connect them across the 1kΩ side. This arrangement will dim the laser, but won’t affect its range much.",
+                        "text_raw": "Depending on your signal source, you also might want to reverse the transformer. Some devices,  like iPods, don’t have enough power to drive 8Ω speakers, so you should connect them across the 1kΩ side. This arrangement will dim the laser, but won’t affect its range much.",
+                        "bullet": "black",
+                        "level": 0
+                    },
+                    {
+                        "text": "When you can hear the radio, break the laser beam with your hand, and notice that the music stops. Try chopping up the audio with your fingers.",
+                        "text_raw": "When you can hear the radio, break the laser beam with your hand, and notice that the music stops. Try chopping up the audio with your fingers.",
+                        "bullet": "black",
+                        "level": 0
+                    }
+                ],
+                "object": null,
+                "images": [
+                    {
+                        "imageid": 26600,
+                        "orderby": 1,
+                        "text": "http://guide-images.makeprojects.org/igi/6TdpBKB6iZYXNvQH"
+                    },
+                    {
+                        "imageid": 26602,
+                        "orderby": 2,
+                        "text": "http://guide-images.makeprojects.org/igi/YpWouTFVAcw4G4Kd"
+                    },
+                    {
+                        "imageid": 17393,
+                        "orderby": 3,
+                        "text": "http://guide-images.makeprojects.org/igi/vfYsJmUUG5YMUbXc"
+                    }
+                ],
+                "number": 5
+            },
+            {
+                "title": "Your laser com system is ready!",
+                "lines": [
+                    {
+                        "text": "To send secret voice  communications, move the amp from the receiver to the transmitter and plug in a mic. You’re ready for the field; just be careful with the volume, to protect the laser.",
+                        "text_raw": "To send secret voice  communications, move the amp from the receiver to the transmitter and plug in a mic. You’re ready for the field; just be careful with the volume, to protect the laser.",
+                        "bullet": "black",
+                        "level": 0
+                    }
+                ],
+                "object": null,
+                "images": [
+                    {
+                        "imageid": 26601,
+                        "orderby": 1,
+                        "text": "http://guide-images.makeprojects.org/igi/BSMlyHjrbICvjEUa"
+                    },
+                    {
+                        "imageid": 26604,
+                        "orderby": 2,
+                        "text": "http://guide-images.makeprojects.org/igi/tnGGXe4cvhLakQ2H"
+                    }
+                ],
+                "number": 6
+            }
+        ],
+        "subject": "",
+        "summary": "Talk in secret over your own private laser beam link.",
+        "time_required": "15 to 30 minutes",
+        "title": "Simple Laser Communicator",
+        "tools": [
+            {
+                "text": "Audio plug, 1/8&quot;, mono",
+                "notes": "from RadioShack. One to fit your radio, and one to plug into the mini amp. (Instead of the mini amp, you can also plug into a stereo or larger amp, using an RCA or 1/4&quot; audio plug, also available at RadioShack.)",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2103854",
+                "thumbnail": ""
+            },
+            {
+                "text": "Helping Hands tool",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=3928375",
+                "thumbnail": ""
+            },
+            {
+                "text": "Radio, transistor",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=3705831",
+                "thumbnail": ""
+            },
+            {
+                "text": "Solder, lead-free",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2062722",
+                "thumbnail": ""
+            },
+            {
+                "text": "Soldering Iron, 15-Watt",
+                "notes": "from RadioShack.",
+                "url": "http://www.radioshack.com/product/index.jsp?productId=2062728",
+                "thumbnail": ""
+            }
+        ],
+        "type": "project"
+    },
+    "guideid": "972"
+}
