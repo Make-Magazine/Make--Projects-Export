@@ -1,0 +1,22 @@
+{
+  "name": "projects-download",
+  "version": "0.0.5",
+  "description": " Code",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Make-Magazine/Make--Projects-Export.git"
+  },
+  "author": "Jake Spurlock",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/Make-Magazine/Make--Projects-Export/issues"
+  },
+  "homepage": "https://github.com/Make-Magazine/Make--Projects-Export",
+  "devDependencies": {
+    "grunt-tree": "~0.4.4"
+  }
+}
