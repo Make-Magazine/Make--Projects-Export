@@ -1,0 +1,988 @@
+{
+  "device": "Microcontrolled Bots",
+  "url": "http://makeprojects.com/Project/Tiny+Wanderer/1685/1",
+  "guide": {
+    "author": {
+      "text": "Doug Paradis",
+      "userid": 9627
+    },
+    "categories": [
+      "Microcontrolled Bots"
+    ],
+    "conclusion": "<h3 id=\"Section_Backup_Plan\">Backup Plan</h3>\n\n<p>Because Tiny Wanderer has no rear-facing sensor, it might back off a cliff. Strategies for preventing this are a current “area of research” at the DPRG. In the code you downloaded, the robot backs up while turning away from the detected edge, for about 1 second (about 90°). Then it resumes rolling forward. If both sensors find a cliff at the same time (very rare), it backs up straight. Wheel speeds and backup time parameters are easily tweakable in the code’s <em>.h</em> file.</p>\n\n<p>You can also change the robot’s behavior by moving one sensor slightly ahead of the other. Tell Tiny to turn slightly toward the leading sensor when it detects a cliff, then turn sharply when the trailing sensor finds it. That way, Tiny will do a multi-point turn and then pivot to run along the cliff!</p>\n\n<p>Yet another approach is to stop the cliff-side wheel entirely and inch the other wheel forward until both sensors detect the cliff — then back up and turn 180°.</p>\n\n<h3 id=\"Section_Sensor_Mods_and_Arduino_Upgrade\">Sensor Mods and Arduino Upgrade</h3>\n\n<p>You can reconfigure the Tiny Wanderer sensors to face forward, for object avoidance, or run close together, for line following. Download the code for these behaviors at <a href=\"http://makeprojects.com/v/29\">http://makeprojects.com/v/29</a>.</p>\n\n<p>We designed the Tiny Wanderer as a hackable platform. One possible modification is to add paper encoder disks (black/white stripes) inside the wheels, and use the IR sensors to track servo speed and perform dead reckoning calculations. And of course, you can also use different types of sensors, such as light, sound, or distance.</p>\n\n<p>For a major upgrade of capabilities, the Tiny Wanderer’s deck has mounting holes that fit a standard Arduino board, which has enough I/O pins to support all of the above — not to mention various plug-in shields with amazing capabilities. (I expect many Arduino-heads to be mainly interested in the Tiny Wanderer as an Arduino-scale rolling platform, and dispense with the whole ATtiny brain.)</p>\n\n<p>If you’re ever in Dallas, the DPRG meets every Tuesday night and every second Saturday of the month. Come visit!</p>\n\n<p><strong>This project first appeared in <a href=\"http://www.makezine.com/29\">MAKE Volume 29</a>, pages 88–99.</strong></p>",
+    "difficulty": "Moderate",
+    "documents": [],
+    "flags": [
+      {
+        "title": "From MAKE Magazine",
+        "flagid": "FROM_MAKE",
+        "text": "This project first appeared on the pages of MAKE magazine."
+      }
+    ],
+    "guideid": 1685,
+    "image": {
+      "imageid": 37515,
+      "text": "http://guide-images.makeprojects.org/igi/HbCbW3iICoBi6GwZ"
+    },
+    "introduction": "<p>In early 2011 my robot club, the <a href=\"http://www.dprg.org/\" rel=\"nofollow\">Dallas Personal Robotics Group</a>, was looking for a way to help our beginning members build up their skills. To this end, we produced a series of lessons covering 5 topics needed to make a simple, programmable robot: making PCBs with the toner transfer method, programming ATtiny microprocessors<wbr />, laying out circuit boards using KiCAD, using Inkscape to design robot parts, and programming state machines. Videos of <a href=\"http://www.dprg.org/tutorials/index.html\" rel=\"nofollow\">these lectures are available on DPRG’s website</a>.</p>\n\n<p>The Tiny Wanderer is the starter DIY robot model we designed to support the series. It uses the unintimidating ATtiny85 chip, which is less complex than larger chips, and the new kit version shown here lets you easily swap in an Arduino.</p>\n\n<p>The chassis, inspired by the now-discontinued Oomlout SERB, has benefited from constant modification and tweaks by DPRG members. Its two IR LED/sensor proximity “feelers” were originally designed to let the bot wander around a tabletop without falling off, but they can be repurposed for obstacle avoidance and line-following. (Another successful mod added 64-slot encoders on the wheels, for dead reckoning.)</p>\n\n<p>I hope the fun we’ve had with Tiny Wanderer will be shared with other hobby roboticists and makers around the world.</p>\n\n<p>Here are some additional mods that give Tiny completely different personalities:</p>\n\n<ul><li>Navigate around via bump sensor in front: <a href=\"/Project/Bump+Sensor+for+the+Tiny+Wanderer/1912/1\">Bump Sensor for the Tiny Wanderer</a></li><li>Light-seeking &quot;Moth&quot; (or light-avoiding): <a href=\"/Project/Tiny+Wanderer+%22Moth%22/1943/1\">Tiny Wanderer &quot;Moth&quot;</a></li></ul>",
+    "introduction_rendered": "<p>In early 2011 my robot club, the <a href=\"http://www.dprg.org/\" rel=\"nofollow\">Dallas Personal Robotics Group</a>, was looking for a way to help our beginning members build up their skills. To this end, we produced a series of lessons covering 5 topics needed to make a simple, programmable robot: making PCBs with the toner transfer method, programming ATtiny microprocessors<wbr />, laying out circuit boards using KiCAD, using Inkscape to design robot parts, and programming state machines. Videos of <a href=\"http://www.dprg.org/tutorials/index.html\" rel=\"nofollow\">these lectures are available on DPRG’s website</a>.</p>\n\n<p>The Tiny Wanderer is the starter DIY robot model we designed to support the series. It uses the unintimidating ATtiny85 chip, which is less complex than larger chips, and the new kit version shown here lets you easily swap in an Arduino.</p>\n\n<p>The chassis, inspired by the now-discontinued Oomlout SERB, has benefited from constant modification and tweaks by DPRG members. Its two IR LED/sensor proximity “feelers” were originally designed to let the bot wander around a tabletop without falling off, but they can be repurposed for obstacle avoidance and line-following. (Another successful mod added 64-slot encoders on the wheels, for dead reckoning.)</p>\n\n<p>I hope the fun we’ve had with Tiny Wanderer will be shared with other hobby roboticists and makers around the world.</p>\n\n<p>Here are some additional mods that give Tiny completely different personalities:</p>\n\n<ul><li>Navigate around via bump sensor in front: <a href=\"/Project/Bump+Sensor+for+the+Tiny+Wanderer/1912/1\">Bump Sensor for the Tiny Wanderer</a></li><li>Light-seeking &quot;Moth&quot; (or light-avoiding): <a href=\"/Project/Tiny+Wanderer+%22Moth%22/1943/1\">Tiny Wanderer &quot;Moth&quot;</a></li></ul><div class=\"parts\"><strong>Relevant parts</strong><ul><li><a href=\"http://makeprojects.com/Item/Plastic_body_and_wheel_parts\">Plastic body and wheel parts</a></li><li><a href=\"http://makeprojects.com/Item/Tiny_Wanderer_circuit_board\">Tiny Wanderer circuit board</a></li><li><a href=\"http://makeprojects.com/Item/Servomotors\">Servomotors</a></li><li><a href=\"http://makeprojects.com/Item/Microcontroller_chip\">Microcontroller chip</a></li><li><a href=\"http://makeprojects.com/Item/LEDs\">LEDs</a></li><li><a href=\"http://makeprojects.com/Item/Phototransistors\">Phototransistors</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2036270\">Diode</a></li><li><a href=\"http://makeprojects.com/Item/resistors\">resistors</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2102517\">Capacitors</a></li><li><a href=\"http://makeprojects.com/Item/Slide_switch\">Slide switch</a></li><li><a href=\"http://makeprojects.com/Item/DIP_socket\">DIP socket</a></li><li><a href=\"http://makeprojects.com/Item/Pin_headers\">Pin headers</a></li><li><a href=\"http://makeprojects.com/Item/Ribbon_cable\">Ribbon cable</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=12515226\">Heat-shrink tubing</a></li><li><a href=\"http://makeprojects.com/Item/O-ring\">O-ring</a></li><li><a href=\"http://makeprojects.com/Item/Bolts\">Bolts</a></li><li><a href=\"http://makeprojects.com/Item/Nuts\">Nuts</a></li><li><a href=\"http://makeprojects.com/Item/Machine_screws\">Machine screws</a></li><li><a href=\"http://makeprojects.com/Item/Nuts\">Nuts</a></li><li><a href=\"http://makeprojects.com/Item/Washers\">Washers</a></li><li><a href=\"http://makeprojects.com/Item/Window_screen_spline\">Window screen spline</a></li><li><a href=\"http://makeprojects.com/Item/Velcro_dot_pair\">Velcro dot pair</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062220\">Battery holder</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=4356387\">Batteries</a></li></ul></div><div class=\"tools\"><strong>Tools</strong><ul><li><a href=\"http://makeprojects.com/Item/Computer\">Computer</a></li><li><a href=\"http://makeprojects.com/Item/Cyanoacrylate_glue\">Cyanoacrylate glue</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=12573439&amp;amp;retainProdsInSession=1\">Heat gun</a></li><li><a href=\"http://makeprojects.com/Item/ISP_%28in-system_programmable%29_programmer_for_AVR_microprocessors\">ISP (in-system programmable) programmer for AVR microprocessors</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=4214667\">Multimeter</a></li><li><a href=\"http://makeprojects.com/Item/Paper_and_Pencil\">Paper and Pencil</a></li><li><a href=\"http://makeprojects.com/Item/Protractor\">Protractor</a></li><li><a href=\"http://makeprojects.com/Item/Sandpaper\">Sandpaper</a></li><li><a href=\"http://makeprojects.com/Item/Scrap_wood\">Scrap wood</a></li><li><a href=\"http://makeprojects.com/Item/Screwdriver\">Screwdriver</a></li><li><a href=\"http://makeprojects.com/Item/Seam_ripper\">Seam ripper</a></li><li><a href=\"http://makeprojects.com/Item/Software\">Software</a></li><li><a href=\"http://makeprojects.com/Item/Soldering_equipment_and_solder\">Soldering equipment and solder</a></li><li><a href=\"http://www.ifixit.com/Tools/Metal-Tweezers/IF145-020\">Tweezers</a></li><li><a href=\"http://www.acehardware.com/product/index.jsp?productId=1289993&amp;amp;kw=utility+knife&amp;amp;origkw=utility+knife&amp;amp;searchId=57105129683\">Utility knife</a></li></ul></div>",
+    "locale": "en",
+    "parts": [
+      {
+        "text": "Plastic body and wheel parts",
+        "notes": "You can download SVG and PDF cutout  templates at makeprojects.com/v/29. You can also hand-cut the body out of 1/8&quot; masonite (aka hardboard).",
+        "url": "http://makeprojects.com/Item/Plastic_body_and_wheel_parts",
+        "thumbnail": ""
+      },
+      {
+        "text": "Tiny Wanderer circuit board",
+        "notes": "Layout files are at http://makeprojects.com/v/29. You can also use plain perf board and hookup wire.",
+        "url": "http://makeprojects.com/Item/Tiny_Wanderer_circuit_board",
+        "thumbnail": ""
+      },
+      {
+        "text": "Servomotors",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Servomotors",
+        "thumbnail": ""
+      },
+      {
+        "text": "Microcontroller chip",
+        "notes": "about $2",
+        "url": "http://makeprojects.com/Item/Microcontroller_chip",
+        "thumbnail": ""
+      },
+      {
+        "text": "LEDs",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/LEDs",
+        "thumbnail": ""
+      },
+      {
+        "text": "Phototransistors",
+        "notes": "aka photodetectors or photosensors. RadioShack sells a 5mm LED/sensor pair, #276-0142, http://radioshack.com.",
+        "url": "http://makeprojects.com/Item/Phototransistors",
+        "thumbnail": ""
+      },
+      {
+        "text": "Diode",
+        "notes": "or similar",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=2036270",
+        "thumbnail": ""
+      },
+      {
+        "text": "resistors",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/resistors",
+        "thumbnail": ""
+      },
+      {
+        "text": "Capacitors",
+        "notes": "",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=2102517",
+        "thumbnail": ""
+      },
+      {
+        "text": "Slide switch",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Slide_switch",
+        "thumbnail": ""
+      },
+      {
+        "text": "DIP socket",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/DIP_socket",
+        "thumbnail": ""
+      },
+      {
+        "text": "Pin headers",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Pin_headers",
+        "thumbnail": ""
+      },
+      {
+        "text": "Ribbon cable",
+        "notes": "aka servo cable",
+        "url": "http://makeprojects.com/Item/Ribbon_cable",
+        "thumbnail": ""
+      },
+      {
+        "text": "Heat-shrink tubing",
+        "notes": "",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=12515226",
+        "thumbnail": ""
+      },
+      {
+        "text": "O-ring",
+        "notes": "or other outside diameter to match bearings",
+        "url": "http://makeprojects.com/Item/O-ring",
+        "thumbnail": ""
+      },
+      {
+        "text": "Bolts",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Bolts",
+        "thumbnail": ""
+      },
+      {
+        "text": "Nuts",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Nuts",
+        "thumbnail": ""
+      },
+      {
+        "text": "Machine screws",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Machine_screws",
+        "thumbnail": ""
+      },
+      {
+        "text": "Nuts",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Nuts",
+        "thumbnail": ""
+      },
+      {
+        "text": "Washers",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Washers",
+        "thumbnail": ""
+      },
+      {
+        "text": "Window screen spline",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Window_screen_spline",
+        "thumbnail": ""
+      },
+      {
+        "text": "Velcro dot pair",
+        "notes": "plus 2 more each time you reconfigure the sensors",
+        "url": "http://makeprojects.com/Item/Velcro_dot_pair",
+        "thumbnail": ""
+      },
+      {
+        "text": "Battery holder",
+        "notes": "",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=2062220",
+        "thumbnail": ""
+      },
+      {
+        "text": "Batteries",
+        "notes": "",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=4356387",
+        "thumbnail": ""
+      }
+    ],
+    "prereqs": [],
+    "steps": [
+      {
+        "title": "Build the Chassis.",
+        "lines": [
+          {
+            "text": "Peel the protective plastic off all acrylic parts. Insert the rubber grommets packaged with the servos into the 4 servo mounting holes. Use four #4×3/8&quot; screws to attach each servo to one of the 2 acrylic side pieces, with the shaft aligned with and on the same side as the etched guideline. With the motors installed, align the side pieces next to each other and make sure they match up.",
+            "text_raw": "Peel the protective plastic off all acrylic parts. Insert the rubber grommets packaged with the servos into the 4 servo mounting holes. Use four #4×3/8\" screws to attach each servo to one of the 2 acrylic side pieces, with the shaft aligned with and on the same side as the etched guideline. With the motors installed, align the side pieces next to each other and make sure they match up.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "See <a href=\"http://makeprojects.com/v/29\" rel=\"nofollow\">http://makeprojects.com/v/29</a> for more photos identifying all the acrylic kit pieces.",
+            "text_raw": "See http://makeprojects.com/v/29 for more photos identifying all the acrylic kit pieces.",
+            "bullet": "icon_reminder",
+            "level": 0
+          },
+          {
+            "text": "Fit the 2 acrylic axle  holders into the bottom of the truck piece. Anchor each one with a nut in its cross-shaped cutout, screwed onto a #4 screw threaded through a washer from the top of  the truck.",
+            "text_raw": "Fit the 2 acrylic axle  holders into the bottom of the truck piece. Anchor each one with a nut in its cross-shaped cutout, screwed onto a #4 screw threaded through a washer from the top of  the truck.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37490,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/fI2oVSqCvMJPEB15"
+          },
+          {
+            "imageid": 37486,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/yExHCDuo3du6HEhL"
+          },
+          {
+            "imageid": 37485,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/XSuDMcJmYHaSaPUX"
+          }
+        ],
+        "number": 1
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Fit the O-ring around one of the skateboard bearings. This will be the rear caster’s wheel. Mount it between the axle holders, with a large acrylic washer on either side, on a 5/16&quot;×1&quot; bolt secured with a matching nut.",
+            "text_raw": "Fit the O-ring around one of the skateboard bearings. This will be the rear caster’s wheel. Mount it between the axle holders, with a large acrylic washer on either side, on a 5/16\"×1\" bolt secured with a matching nut.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "For the caster’s swivel mount, run four #4 screws through 4 small metal washers, then through the 4 mounting holes around the rear caster hole in the large acrylic base piece. Drop the bearing holder (the acrylic square with the larger center hole) over the 4 screws. Drop the bearing into the holder, then drop 4 small acrylic washers onto the screws. Finally, drop the bearing retainer (the square with the smaller hole) onto the screws and over the bearing. Secure with nuts.",
+            "text_raw": "For the caster’s swivel mount, run four #4 screws through 4 small metal washers, then through the 4 mounting holes around the rear caster hole in the large acrylic base piece. Drop the bearing holder (the acrylic square with the larger center hole) over the 4 screws. Drop the bearing into the holder, then drop 4 small acrylic washers onto the screws. Finally, drop the bearing retainer (the square with the smaller hole) onto the screws and over the bearing. Secure with nuts.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The metal washers provide clearance; without them, the caster will hit the screws.",
+            "text_raw": "The metal washers provide clearance; without them, the caster will hit the screws.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Attach the side pieces to the top of the base by fitting 4 nut/bolt pairs into its cross-slots, as in Step 1. Use 2 more nuts and bolts to join the tops of the side pieces to the crossbar piece.",
+            "text_raw": "Attach the side pieces to the top of the base by fitting 4 nut/bolt pairs into its cross-slots, as in Step 1. Use 2 more nuts and bolts to join the tops of the side pieces to the crossbar piece.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Tweezers help to hold the nut in place while you start the screw.",
+            "text_raw": "Tweezers help to hold the nut in place while you start the screw.",
+            "bullet": "icon_reminder",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37487,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/yCEOxm1aptiJpZaf"
+          },
+          {
+            "imageid": 37489,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/LBjo5WYxRlmdQUmi"
+          },
+          {
+            "imageid": 37488,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/xoVPYPxXmwQuxPVH"
+          }
+        ],
+        "number": 2
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Assemble the sensor tray from the sensor shelf, sensor shelf riser, 2 sensor shelf brackets, and 6 nut, screw, and washer sets. As with the other acrylic pieces, fit the tabs into the slots and secure by twisting the nuts down on the bolts in their cross-slots. The sensor shelf will act as a base for attaching the robot’s sensors.",
+            "text_raw": "Assemble the sensor tray from the sensor shelf, sensor shelf riser, 2 sensor shelf brackets, and 6 nut, screw, and washer sets. As with the other acrylic pieces, fit the tabs into the slots and secure by twisting the nuts down on the bolts in their cross-slots. The sensor shelf will act as a base for attaching the robot’s sensors.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Attach the sensor tray to the front of the chassis with 2 screws.",
+            "text_raw": "Attach the sensor tray to the front of the chassis with 2 screws.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37492,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/QYND35gZmJLaGyIp"
+          },
+          {
+            "imageid": 37493,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/ycoALOXIhUmahVQU"
+          }
+        ],
+        "number": 3
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Attach the caster holder to the caster swivel mount with the remaining 5/16&quot; bolt and matching nut. Fit 2 large acrylic washers over the bolt between the underside of the swivel mount and the top of the caster holder, so the caster can turn without mounting hardware getting in the way. The inner race of the horizontal bearing should be clamped between the large bolt head and the 2 acrylic washers.",
+            "text_raw": "Attach the caster holder to the caster swivel mount with the remaining 5/16\" bolt and matching nut. Fit 2 large acrylic washers over the bolt between the underside of the swivel mount and the top of the caster holder, so the caster can turn without mounting hardware getting in the way. The inner race of the horizontal bearing should be clamped between the large bolt head and the 2 acrylic washers.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "You may have to temporarily loosen the screws to get the bolt to fit through the caster assembly so that the bolt’s head is captured by the wheel supports.",
+            "text_raw": "You may have to temporarily loosen the screws to get the bolt to fit through the caster assembly so that the bolt’s head is captured by the wheel supports.",
+            "bullet": "icon_note",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37518,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/5Hsy1BPMjLAXBYSl"
+          },
+          {
+            "imageid": 37494,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/OhfKlgpEcFyN2VFY"
+          }
+        ],
+        "number": 4
+      },
+      {
+        "title": "Fit the tires and hub.",
+        "lines": [
+          {
+            "text": "For each of the 2 tires, cut a 12¾&quot; length of window screen spline. Use a seam ripper to puncture each piece about ¼&quot; from one end. Slit the spline along one edge, going almost its entire length, but stopping when the seam ripper point shows at the other end.",
+            "text_raw": "For each of the 2 tires, cut a 12¾\" length of window screen spline. Use a seam ripper to puncture each piece about ¼\" from one end. Slit the spline along one edge, going almost its entire length, but stopping when the seam ripper point shows at the other end.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Drop a dot of super glue onto a piece of thick paper. Run your finger down the slit to make sure it’s not twisted, then align the 2 ends and dip them into the super glue. Hold the ends together for 20 seconds; they should stick together. Put the tire aside for at least 15 minutes.",
+            "text_raw": "Drop a dot of super glue onto a piece of thick paper. Run your finger down the slit to make sure it’s not twisted, then align the 2 ends and dip them into the super glue. Hold the ends together for 20 seconds; they should stick together. Put the tire aside for at least 15 minutes.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37495,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/k3u1hcLAybcrfY3N"
+          },
+          {
+            "imageid": 37496,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/h5l4TjOKEaJLGWXJ"
+          }
+        ],
+        "number": 5
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Use the seam ripper to slit the joint area, making the slit continuous. Starting with the joint, place the tire onto the wheel, working it around the rim a little bit at a time.",
+            "text_raw": "Use the seam ripper to slit the joint area, making the slit continuous. Starting with the joint, place the tire onto the wheel, working it around the rim a little bit at a time.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Place a pencil through the center of the wheel and roll it on a table to seat the tire. Use fine sandpaper to lightly sand the glue joint. Be careful — you only want to remove excess glue.",
+            "text_raw": "Place a pencil through the center of the wheel and roll it on a table to seat the tire. Use fine sandpaper to lightly sand the glue joint. Be careful — you only want to remove excess glue.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37497,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/rnQXQVoARKcGCFps"
+          },
+          {
+            "imageid": 37499,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/uaiDiI2kQyGpy6Zd"
+          }
+        ],
+        "number": 6
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "With each circular servo horn, center it under a wheel with the horn hub protruding through. Rotate the horn until you see 2 of its 4 injection-mold marks through each of the wheel’s slots. Mark the horn through the 2 slots with a sharp pencil. Drill two 7/64&quot; holes into the horn where  the mold marks intercept your lines.",
+            "text_raw": "With each circular servo horn, center it under a wheel with the horn hub protruding through. Rotate the horn until you see 2 of its 4 injection-mold marks through each of the wheel’s slots. Mark the horn through the 2 slots with a sharp pencil. Drill two 7/64\" holes into the horn where  the mold marks intercept your lines.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Use two #4 screws and nuts to attach a horn to each wheel, and mount the wheels on the servo axles using the small screw that comes with the servos.",
+            "text_raw": "Use two #4 screws and nuts to attach a horn to each wheel, and mount the wheels on the servo axles using the small screw that comes with the servos.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37501,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/aiNoTHtqZNKyOKmU"
+          },
+          {
+            "imageid": 37500,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/f2GLgS1wpxSStrYG"
+          }
+        ],
+        "number": 7
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Separate the PCB into 3 boards — the controller board and 2 sensor boards — by splitting it along its 2 scribe lines. You may need to deepen the scribe line between boards with a utility knife before separating them.",
+            "text_raw": "Separate the PCB into 3 boards — the controller board and 2 sensor boards — by splitting it along its 2 scribe lines. You may need to deepen the scribe line between boards with a utility knife before separating them.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Cut the 8-pin female header into two 3-pin headers by cutting through the fourth and fifth pins. Sand the cut edges smooth.",
+            "text_raw": "Cut the 8-pin female header into two 3-pin headers by cutting through the fourth and fifth pins. Sand the cut edges smooth.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Populate the board with the components as marked, starting with the shortest ones (resistors and diode) and working up to the tallest. Route the battery holder’s leads through the strain relief holes before attaching. Make sure the large capacitor’s polarity is correct, with the lead near the band marked with negative signs (–) opposite the hole marked (+). The female headers go into the locations marked “Sensor R” and “Sensor L.” Do not place the chip into the socket yet.",
+            "text_raw": "Populate the board with the components as marked, starting with the shortest ones (resistors and diode) and working up to the tallest. Route the battery holder’s leads through the strain relief holes before attaching. Make sure the large capacitor’s polarity is correct, with the lead near the band marked with negative signs (–) opposite the hole marked (+). The female headers go into the locations marked “Sensor R” and “Sensor L.” Do not place the chip into the socket yet.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Use a multimeter to check all connections, following the wiring-check tables at <a href=\"http://makeprojects.com/v/29\">http://makeprojects.com/v/29</a>. If everything checks out, plug in the chip with its pin 1 near the switch, and its notch next to capacitor C1.",
+            "text_raw": "Use a multimeter to check all connections, following the wiring-check tables at http://makeprojects.com/v/29. If everything checks out, plug in the chip with its pin 1 near the switch, and its notch next to capacitor C1.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The wiring tables list all the pairs of points on the board that should have continuity or a specified resistance.",
+            "text_raw": "The wiring tables list all the pairs of points on the board that should have continuity or a specified resistance.",
+            "bullet": "icon_note",
+            "level": 0
+          },
+          {
+            "text": "After any work on the circuit board, perform the checks again before you plug in the chip. Before checking, disconnect the servos and sensors from the controller board and turn the power switch off.",
+            "text_raw": "After any work on the circuit board, perform the checks again before you plug in the chip. Before checking, disconnect the servos and sensors from the controller board and turn the power switch off.",
+            "bullet": "icon_reminder",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37525,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/wupHkMIwZDuPaQfO"
+          },
+          {
+            "imageid": 37526,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/uPKxx4U5nsnRX3Rw"
+          },
+          {
+            "imageid": 37506,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/nVQEvdrYKOaVHO4I"
+          }
+        ],
+        "number": 8
+      },
+      {
+        "title": "Assemble the sensor boards.",
+        "lines": [
+          {
+            "text": "Plug a phototransistor and an LED into each sensor board, orienting the small flat on the side of the plastic lens (the LED’s cathode or transistor’s collector) as indicated on the board. “D” marks the LED’s position and “Q” marks the phototransistor.",
+            "text_raw": "Plug a phototransistor and an LED into each sensor board, orienting the small flat on the side of the plastic lens (the LED’s cathode or transistor’s collector) as indicated on the board. “D” marks the LED’s position and “Q” marks the phototransistor.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Fit the 1&quot; length of heat-shrink tubing over a phototransistor so that its edge touches the board, then cut it off just above the plastic lens. Similarly fit and trim a piece over the other phototransistor. Do not heat the tubing.",
+            "text_raw": "Fit the 1\" length of heat-shrink tubing over a phototransistor so that its edge touches the board, then cut it off just above the plastic lens. Similarly fit and trim a piece over the other phototransistor. Do not heat the tubing.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37527,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/pI5lhGjWxodPnmwU"
+          },
+          {
+            "imageid": 37528,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/2D2ueTtlwFKCdkPG"
+          }
+        ],
+        "number": 9
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Cut the 3-wire ribbon cable in half. Strip and tin all ends of both pieces. For each, solder one end to a 3-pin male header and the other to a sensor board, with the red wire in the location marked “1.”",
+            "text_raw": "Cut the 3-wire ribbon cable in half. Strip and tin all ends of both pieces. For each, solder one end to a 3-pin male header and the other to a sensor board, with the red wire in the location marked “1.”",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Plug the cables into the female sockets on the controller board, connecting  the red wire to the sides  marked “1.”",
+            "text_raw": "Plug the cables into the female sockets on the controller board, connecting  the red wire to the sides  marked “1.”",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37505,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/Vg41VuPsHN43SkNB"
+          },
+          {
+            "imageid": 37529,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/o6fwRfUTcsVSNtRh"
+          },
+          {
+            "imageid": 37509,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/YVi2TvCSbLjKmNFU"
+          }
+        ],
+        "number": 10
+      },
+      {
+        "title": "Make the sensor arms.",
+        "lines": [
+          {
+            "text": "The 2 sets of Tiny Wanderer sensor arms work with 2 different behavior programs: cliff-sensing (for wandering an empty tabletop) and object avoidance. See <a href=\"http://makeprojects.com/v/29\">http://makeprojects.com/v/29</a> for a third sensor arm design, for line-following behavior.",
+            "text_raw": "The 2 sets of Tiny Wanderer sensor arms work with 2 different behavior programs: cliff-sensing (for wandering an empty tabletop) and object avoidance. See http://makeprojects.com/v/29 for a third sensor arm design, for line-following behavior.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "For the <em>cliff-sensing configuration</em>, use zip ties to attach the sensor boards to the shorter of the 2 pairs of acrylic sensor supports, and bolt the arms to the sensor tray with the phototransistors and LEDs pointing downward.",
+            "text_raw": "For the ''cliff-sensing configuration'', use zip ties to attach the sensor boards to the shorter of the 2 pairs of acrylic sensor supports, and bolt the arms to the sensor tray with the phototransistors and LEDs pointing downward.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "For the <em>object-avoidance arms</em>, first make a bending guide by cutting a 100° corner on a scrap of wood. Mark each of the longer acrylic sensor supports 1¾&quot; from its long end, warm it with a heat gun or by holding the heating element of a soldering iron near (but not touching), and then bend it over the guide.",
+            "text_raw": "For the ''object-avoidance arms'', first make a bending guide by cutting a 100° corner on a scrap of wood. Mark each of the longer acrylic sensor supports 1¾\" from its long end, warm it with a heat gun or by holding the heating element of a soldering iron near (but not touching), and then bend it over the guide.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Zip-tie the sensor boards to the object avoidance arms, then bolt the arms to the tray, angled slightly inward to avoid a blind spot in the center.",
+            "text_raw": "Zip-tie the sensor boards to the object avoidance arms, then bolt the arms to the tray, angled slightly inward to avoid a blind spot in the center.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37511,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/CROC536ilioQgn1D"
+          },
+          {
+            "imageid": 37530,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/oJPwHLJFyNh6OqOH"
+          },
+          {
+            "imageid": 37513,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/hpICfGZNSWxxMTVT"
+          }
+        ],
+        "number": 11
+      },
+      {
+        "title": "Program the ATtiny85.",
+        "lines": [
+          {
+            "text": "Disconnect the servos from the PCB; you can leave the sensors connected. Plug your AVR ISP programmer between your computer and the onboard 2 x 3 header, with the pin marked “1” connected to pin 1 of the cable (marked with a triangle on the plug and a red wire).",
+            "text_raw": "Disconnect the servos from the PCB; you can leave the sensors connected. Plug your AVR ISP programmer between your computer and the onboard 2 x 3 header, with the pin marked “1” connected to pin 1 of the cable (marked with a triangle on the plug and a red wire).",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "When the two LEDs on the AVRISP mkII programmer turn green, the programmer is ready for use.",
+            "text_raw": "When the two LEDs on the AVRISP mkII programmer turn green, the programmer is ready for use.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37522,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/POmHcBUAiDwDpoUO"
+          },
+          {
+            "imageid": 37523,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/cZEYXdLy15PSqWwH"
+          },
+          {
+            "imageid": 37524,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/aTLNJRqYVn1VQrcH"
+          }
+        ],
+        "number": 12
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "There are several tool chain options for programming AVR chips, but a good choice for beginners is to combine Atmel’s AVR Studio 4 with the open-source WinAVR.",
+            "text_raw": "There are several tool chain options for programming AVR chips, but a good choice for beginners is to combine Atmel’s AVR Studio 4 with the open-source WinAVR.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "<a href=\"http://sourceforge.net/projects/winavr/\" rel=\"nofollow\">Download and install WinAVR</a> and AVR Studio 4 (search “AVR Studio 4” at <a href=\"http://www2.atmel.com/\" rel=\"nofollow\">http://www2.atmel.com/</a>) and install with all defaults. You will need to register on the Atmel website before downloading the AVR Studio 4 installer.",
+            "text_raw": "[http://sourceforge.net/projects/winavr/|Download and install WinAVR] and AVR Studio 4 (search “AVR Studio 4” at http://www2.atmel.com/) and install with all defaults. You will need to register on the Atmel website before downloading the AVR Studio 4 installer.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Some have reported an issue of AVR Studio 4 installer freezing after selecting “Install”. A proposed work-around is to open Task Manager and end the task “Rundll32.exe.” The author has not experienced this issue.",
+            "text_raw": "Some have reported an issue of AVR Studio 4 installer freezing after selecting “Install”. A proposed work-around is to open Task Manager and end the task “Rundll32.exe.” The author has not experienced this issue.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Atmel now recommends their newer AVR Studio 5, which has some nice features, but is larger and more complex than version 4.",
+            "text_raw": "Atmel now recommends their newer AVR Studio 5, which has some nice features, but is larger and more complex than version 4.",
+            "bullet": "icon_note",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 34358,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/vMwjFcbM2fR6LLSn"
+          },
+          {
+            "imageid": 34359,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/FKXbQT6K4XpLfGVM"
+          }
+        ],
+        "number": 13
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Launch AVR Studio 4. Click the “New Project” button at the top of the Welcome screen, then select “AVR GCC” for the Project Type, to specify the gcc compiler, for project code written in C. Give the project a name (“TW_tabletop” here), then uncheck “Create initial file” and check “Create folder.”",
+            "text_raw": "Launch AVR Studio 4. Click the “New Project” button at the top of the Welcome screen, then select “AVR GCC” for the Project Type, to specify the gcc compiler, for project code written in C. Give the project a name (“TW_tabletop” here), then uncheck “Create initial file” and check “Create folder.”",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Create a new folder named “AVR” in My Documents, select that location, and click “Next.” In the next popup, select “AVR Simulator 2” as the Debug platform and ATtiny85 as the Device. Click Finish.",
+            "text_raw": "Create a new folder named “AVR” in My Documents, select that location, and click “Next.” In the next popup, select “AVR Simulator 2” as the Debug platform and ATtiny85 as the Device. Click Finish.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Download the Tiny Wanderer code examples from <a href=\"http://makeprojects.com/v/29\">http://makeprojects.com/v/29</a>, or else use your own code. Each program will consist of a .c and .h file, for the C source and headers. Copy or move these files to the project directory created in step 7c. For example use  <a href=\"http://cdn.makezine.com/make/29/edge_detection.zip\">tinywanderer_edgeDetect_version2b.c and tinywanderer_edgeDetect_version2b.h</a>, for the tabletop edge detection program.",
+            "text_raw": "Download the Tiny Wanderer code examples from http://makeprojects.com/v/29, or else use your own code. Each program will consist of a .c and .h file, for the C source and headers. Copy or move these files to the project directory created in step 7c. For example use  [http://cdn.makezine.com/make/29/edge_detection.zip|tinywanderer_edgeDetect_version2b.c and tinywanderer_edgeDetect_version2b.h], for the tabletop edge detection program.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Each project that you program into the Tiny Wanderer will have different .c and .h files. Be sure to use the appropriate .c and .h files for your project.",
+            "text_raw": "Each project that you program into the Tiny Wanderer will have different .c and .h files. Be sure to use the appropriate .c and .h files for your project.",
+            "bullet": "icon_note",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 34362,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/A4FWYeME2AnDIIoQ"
+          },
+          {
+            "imageid": 34363,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/FADSmfaKkHXbW6Kv"
+          }
+        ],
+        "number": 14
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Open the project AVR GCC pane, right-click the “Source Files” folder, select “Add Existing Source File(s)” and specify the project’s .c file. Do the same for the project’s .h file after right-clicking on the “Header Files” folder.",
+            "text_raw": "Open the project AVR GCC pane, right-click the “Source Files” folder, select “Add Existing Source File(s)” and specify the project’s .c file. Do the same for the project’s .h file after right-clicking on the “Header Files” folder.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Double-click both project files in the AVR GCC pane to open them up in the editor. Right-click Project → Configuration options menu item, select “Custom Options” at the left of the popup, In the Custom Options pane, uncheck “Use AVR Toolchain” box and add the locations for avr-gcc.exe and make.exe. The default locations for these will be <em>C:\\WinAVR-20101001\\bin</em> and <em>C:\\WinAVR-20101001\\utils\\bin</em>, respectively. Click “OK”.",
+            "text_raw": "Double-click both project files in the AVR GCC pane to open them up in the editor. Right-click Project → Configuration options menu item, select “Custom Options” at the left of the popup, In the Custom Options pane, uncheck “Use AVR Toolchain” box and add the locations for avr-gcc.exe and make.exe. The default locations for these will be ''C:\\WinAVR-20101001\\bin'' and ''C:\\WinAVR-20101001\\utils\\bin'', respectively. Click “OK”.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "This is where you connect AVR Studio 4 to WinAVR, installed earlier. These instructions apply to AVR Studio 4.19 (build 760). This final version differs from previous versions of AVR Studio 4.",
+            "text_raw": "This is where you connect AVR Studio 4 to WinAVR, installed earlier. These instructions apply to AVR Studio 4.19 (build 760). This final version differs from previous versions of AVR Studio 4.",
+            "bullet": "icon_note",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 34370,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/NHuHTwFWJ6HSRUUW"
+          },
+          {
+            "imageid": 34371,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/oJpuaEYWNX3MMMIx"
+          },
+          {
+            "imageid": 34372,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/Gj6CJh6kNE4b4dQV"
+          }
+        ],
+        "number": 15
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Now you can edit your program. To build the project for uploading to the ATTiny85 chip, select the “Build Active Configuration” icon on the tool bar or push F7. You will either see a successful build message or a list of errors for debugging.",
+            "text_raw": "Now you can edit your program. To build the project for uploading to the ATTiny85 chip, select the “Build Active Configuration” icon on the tool bar or push F7. You will either see a successful build message or a list of errors for debugging.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "After a successful build, connect your programmer to the Tiny Wanderer PCB board and click the “Display the Connect Dialog” icon on the toolbar. Turn the power switch on and make sure the robot has batteries. Select your programmer and click “Connect…”",
+            "text_raw": "After a successful build, connect your programmer to the Tiny Wanderer PCB board and click the “Display the Connect Dialog” icon on the toolbar. Turn the power switch on and make sure the robot has batteries. Select your programmer and click “Connect…”",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Click the small “Connect to the Selected AVR Programmer” icon in AVR Studio’s toolbar. Click “Read Signature” in the resulting popup and wait for the “Leaving Programming Mode” message at the bottom.",
+            "text_raw": "Click the small “Connect to the Selected AVR Programmer” icon in AVR Studio’s toolbar. Click “Read Signature” in the resulting popup and wait for the “Leaving Programming Mode” message at the bottom.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Click the Program tab at the top, and wait for the path of the compiled HEX file to appear under the “Flash” subheading. Once it appears, click “Program” to upload it to the ATTiny.",
+            "text_raw": "Click the Program tab at the top, and wait for the path of the compiled HEX file to appear under the “Flash” subheading. Once it appears, click “Program” to upload it to the ATTiny.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "If you change projects, the HEX file path will not change. You must change this path to the new project’s file.",
+            "text_raw": "If you change projects, the HEX file path will not change. You must change this path to the new project’s file.",
+            "bullet": "icon_note",
+            "level": 0
+          },
+          {
+            "text": "Turn off the power to the board, unplug the programmer, and re-plug the servos.",
+            "text_raw": "Turn off the power to the board, unplug the programmer, and re-plug the servos.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Congratulations! You have reprogrammed your AVR microprocessor.",
+            "text_raw": "Congratulations! You have reprogrammed your AVR microprocessor.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 34373,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/JyBQaaV4dGexd4lT"
+          },
+          {
+            "imageid": 34374,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/iyofmHPWlPxL1BlS"
+          },
+          {
+            "imageid": 34375,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/KJBANQ4RlAE6ffIe"
+          }
+        ],
+        "number": 16
+      },
+      {
+        "title": "Make the finishing touches.",
+        "lines": [
+          {
+            "text": "Bolt the controller to the chassis with the battery wires pointing rearward. Use small acrylic washers as standoffs under the board. Add velcro for holding the battery case onto the rear of the base.",
+            "text_raw": "Bolt the controller to the chassis with the battery wires pointing rearward. Use small acrylic washers as standoffs under the board. Add velcro for holding the battery case onto the rear of the base.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Plug the servos into the board. If you sourced your own servos, you may need to adjust the speed settings in the <em>.h</em> file, due to differences in servos.",
+            "text_raw": "Plug the servos into the board. If you sourced your own servos, you may need to adjust the speed settings in the ''.h'' file, due to differences in servos.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Left and Right as marked on the board are defined with respect to looking at the robot from the front, not as the robot’s own left and right.",
+            "text_raw": "Left and Right as marked on the board are defined with respect to looking at the robot from the front, not as the robot’s own left and right.",
+            "bullet": "icon_note",
+            "level": 0
+          },
+          {
+            "text": "To test, hold both sensors over a table and alternately move each off the edge.  With both sensors over the table, the wheels should run forward, and with one off the edge, they should run backward at different speeds.",
+            "text_raw": "To test, hold both sensors over a table and alternately move each off the edge.  With both sensors over the table, the wheels should run forward, and with one off the edge, they should run backward at different speeds.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "To calibrate the servos, hold the robot in midair and adjust the potentiometers until both wheels sit still. Then turn the power off for a few minutes to let the large capacitor discharge. Your Tiny Wanderer is ready to roll!",
+            "text_raw": "To calibrate the servos, hold the robot in midair and adjust the potentiometers until both wheels sit still. Then turn the power off for a few minutes to let the large capacitor discharge. Your Tiny Wanderer is ready to roll!",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 37531,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/LuWZywEAlrXgj4Ef"
+          },
+          {
+            "imageid": 37517,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/BUORXlm5NLDZRftN"
+          },
+          {
+            "imageid": 37516,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/aiMVdGkCx5SQwpRH"
+          }
+        ],
+        "number": 17
+      }
+    ],
+    "subject": "",
+    "summary": "Starter robot autonomously navigates with a $2 microcontroller.",
+    "time_required": "A weekend",
+    "title": "Tiny Wanderer",
+    "tools": [
+      {
+        "text": "Computer",
+        "notes": "You can use Linux or Mac OS, but you’ll need a different software tool chain than described here.",
+        "url": "http://makeprojects.com/Item/Computer",
+        "thumbnail": ""
+      },
+      {
+        "text": "Cyanoacrylate glue",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Cyanoacrylate_glue",
+        "thumbnail": ""
+      },
+      {
+        "text": "Heat gun",
+        "notes": "",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=12573439&amp;retainProdsInSession=1",
+        "thumbnail": ""
+      },
+      {
+        "text": "ISP (in-system programmable) programmer for AVR microprocessors",
+        "notes": "I use the AVRISP mkII, $34 direct from Atmel Corp. (http://atmel.com). There are less expensive options, but non-Atmel programmers may lag in supporting new chips and drivers. Only update your programmer using firmware from its manufacturer. If your programmer has a 10-pin header, you also need a 10-pin to 6-pin AVR ISP adapter, which you can make or buy for less than $5.",
+        "url": "http://makeprojects.com/Item/ISP_%28in-system_programmable%29_programmer_for_AVR_microprocessors",
+        "thumbnail": ""
+      },
+      {
+        "text": "Multimeter",
+        "notes": "",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=4214667",
+        "thumbnail": ""
+      },
+      {
+        "text": "Paper and Pencil",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Paper_and_Pencil",
+        "thumbnail": ""
+      },
+      {
+        "text": "Protractor",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Protractor",
+        "thumbnail": ""
+      },
+      {
+        "text": "Sandpaper",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Sandpaper",
+        "thumbnail": ""
+      },
+      {
+        "text": "Scrap wood",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Scrap_wood",
+        "thumbnail": ""
+      },
+      {
+        "text": "Screwdriver",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Screwdriver",
+        "thumbnail": ""
+      },
+      {
+        "text": "Seam ripper",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Seam_ripper",
+        "thumbnail": ""
+      },
+      {
+        "text": "Software",
+        "notes": "Download from http://winavr.sourceforge.net, and search “AVR Studio 4&quot; at http://atmel.com.",
+        "url": "http://makeprojects.com/Item/Software",
+        "thumbnail": ""
+      },
+      {
+        "text": "Soldering equipment and solder",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Soldering_equipment_and_solder",
+        "thumbnail": ""
+      },
+      {
+        "text": "Tweezers",
+        "notes": "",
+        "url": "http://www.ifixit.com/Tools/Metal-Tweezers/IF145-020",
+        "thumbnail": ""
+      },
+      {
+        "text": "Utility knife",
+        "notes": "",
+        "url": "http://www.acehardware.com/product/index.jsp?productId=1289993&amp;kw=utility+knife&amp;origkw=utility+knife&amp;searchId=57105129683",
+        "thumbnail": ""
+      }
+    ],
+    "type": "project"
+  },
+  "guideid": "1685"
+}

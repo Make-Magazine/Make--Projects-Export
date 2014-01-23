@@ -1,0 +1,856 @@
+{
+  "device": "3D Printing",
+  "url": "http://makeprojects.com/Project/Getting+Started+With+Slic3r/2906/1",
+  "guide": {
+    "author": {
+      "text": "Eric Weinhoffer",
+      "userid": 15040
+    },
+    "categories": [
+      "3D Printing",
+      "CNC"
+    ],
+    "conclusion": "",
+    "difficulty": "Easy",
+    "documents": [],
+    "flags": [],
+    "guideid": 2906,
+    "image": {
+      "imageid": 53804,
+      "text": "http://guide-images.makeprojects.org/igi/11LFVIRYTpWkbmxv"
+    },
+    "introduction": "<p>So you have a 3D Printer and a 3D file, but now what? Well, you have to slice it up into layers and create a .GCODE file, which you'll then send to your 3D Printer. There are many options for slicing parts in preparation for 3D Printing, but Slic3r's nice because it's Open Source, free to use, relatively quick, and extremely customizable.</p>\n\n<p>I'll describe how each of the many settings relates to the actions of your 3D Printer, and how to correctly adjust them to optimize your machine for your application. I don't have experience with tweaking all of these settings (there are a lot), but I'll do my best to describe what they do.</p>\n\n<p>I recently read RichRap's fantastic guide, <a href=\"http://richrap.blogspot.com/2012/01/slic3r-is-nicer-part-1-settings-and.html\" rel=\"nofollow\">Slic3r is Nicer</a>, and recommend that you give it a read as well. Although Rich has a lot of nice photos and great explanations in his tutorial, it is almost a year old, and a lot has been added to Slic3r since then. Unlike me, he does cover extruder calibration in his tutorial, which is an optional, although beneficial, process.</p>\n\n<p>The manufacturer of your 3D Printer most likely provides either their default slicing settings, from which you'll have to manually enter numbers into Slic3r, or an exported profile. If you have a .INI Slic3r profile, I'd recommend starting with that and tweaking settings from there (you can import a profile in Slic3r by going to File -&gt; Import Config).</p>\n\n<p>*Unless otherwise noted, photos of prints in progress are from <a href=\"http://www.flickr.com/photos/jabella/\" rel=\"nofollow\">John Abella</a>.</p>\n\n<p>*Main photo is from the <a href=\"http://slic3r.org/\" rel=\"nofollow\">Slic3r homepage</a>.</p>\n\n<p>Disclaimer: Despite the fact that I provide good starter settings here, there is no &quot;set formula&quot; that will work well for all machines, so experimentation is required if you really want to optimize your prints.</p>\n\n<p>You can download Slic3r for free from the <a href=\"http://slic3r.org/\" rel=\"nofollow\">website</a> or <a href=\"https://github.com/alexrj/Slic3r\" rel=\"nofollow\">GitHub</a>. Now open it up and let's get started!</p>",
+    "introduction_rendered": "<p>So you have a 3D Printer and a 3D file, but now what? Well, you have to slice it up into layers and create a .GCODE file, which you'll then send to your 3D Printer. There are many options for slicing parts in preparation for 3D Printing, but Slic3r's nice because it's Open Source, free to use, relatively quick, and extremely customizable.</p>\n\n<p>I'll describe how each of the many settings relates to the actions of your 3D Printer, and how to correctly adjust them to optimize your machine for your application. I don't have experience with tweaking all of these settings (there are a lot), but I'll do my best to describe what they do.</p>\n\n<p>I recently read RichRap's fantastic guide, <a href=\"http://richrap.blogspot.com/2012/01/slic3r-is-nicer-part-1-settings-and.html\" rel=\"nofollow\">Slic3r is Nicer</a>, and recommend that you give it a read as well. Although Rich has a lot of nice photos and great explanations in his tutorial, it is almost a year old, and a lot has been added to Slic3r since then. Unlike me, he does cover extruder calibration in his tutorial, which is an optional, although beneficial, process.</p>\n\n<p>The manufacturer of your 3D Printer most likely provides either their default slicing settings, from which you'll have to manually enter numbers into Slic3r, or an exported profile. If you have a .INI Slic3r profile, I'd recommend starting with that and tweaking settings from there (you can import a profile in Slic3r by going to File -&gt; Import Config).</p>\n\n<p>*Unless otherwise noted, photos of prints in progress are from <a href=\"http://www.flickr.com/photos/jabella/\" rel=\"nofollow\">John Abella</a>.</p>\n\n<p>*Main photo is from the <a href=\"http://slic3r.org/\" rel=\"nofollow\">Slic3r homepage</a>.</p>\n\n<p>Disclaimer: Despite the fact that I provide good starter settings here, there is no &quot;set formula&quot; that will work well for all machines, so experimentation is required if you really want to optimize your prints.</p>\n\n<p>You can download Slic3r for free from the <a href=\"http://slic3r.org/\" rel=\"nofollow\">website</a> or <a href=\"https://github.com/alexrj/Slic3r\" rel=\"nofollow\">GitHub</a>. Now open it up and let's get started!</p>",
+    "locale": "en",
+    "parts": [],
+    "prereqs": [],
+    "steps": [
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "The application is broken up into four tabs: Plater, Print Settings, Filament Settings, and Printer Settings. The Plater tab is the most self-explanatory, and typically the last place you'll end up before slicing, so we'll come back to that later.",
+            "text_raw": "The application is broken up into four tabs: Plater, Print Settings, Filament Settings, and Printer Settings. The Plater tab is the most self-explanatory, and typically the last place you'll end up before slicing, so we'll come back to that later.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "One of the neat things about Slic3r is how easy it is to create, and recall, a bunch of different profiles.",
+            "text_raw": "One of the neat things about Slic3r is how easy it is to create, and recall, a bunch of different profiles.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "After changing any setting, clicking the Save icon will bring up a text box, where you can change the name of the profile.",
+            "text_raw": "After changing any setting, clicking the Save icon will bring up a text box, where you can change the name of the profile.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "Try creating a profile not only for each separate printer, but for each specific type of print as well, like &quot;Ultimaker Hollow Part&quot; or &quot;Ultimaker Super Fast.&quot;",
+            "text_raw": "Try creating a profile not only for each separate printer, but for each specific type of print as well, like \"Ultimaker Hollow Part\" or \"Ultimaker Super Fast.\"",
+            "bullet": "icon_note",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53688,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/LIn2sfcu5R6JwybL"
+          },
+          {
+            "imageid": 53749,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/TGExVjbxN53DlRr3"
+          },
+          {
+            "imageid": 53751,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/sdar5sMIbojkgXGq"
+          }
+        ],
+        "number": 1
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "The first subset of Print Settings is &quot;Layers and Perimeters&quot;. The &quot;Layer Height&quot; is the distance the Z-platform (or extruder) moves between each layer. So, a smaller layer height will generally result in a better looking, smoother part, but will also take longer to print. Anywhere between 0.2 and 0.3mm is probably a good place to start.",
+            "text_raw": "The first subset of Print Settings is \"Layers and Perimeters\". The \"Layer Height\" is the distance the Z-platform (or extruder) moves between each layer. So, a smaller layer height will generally result in a better looking, smoother part, but will also take longer to print. Anywhere between 0.2 and 0.3mm is probably a good place to start.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The &quot;First Layer Height&quot; is exactly what it sounds like, and can be entered in mm or % (a First Layer Height of 50% will be half of the standard Layer Height).",
+            "text_raw": "The \"First Layer Height\" is exactly what it sounds like, and can be entered in mm or % (a First Layer Height of 50% will be half of the standard Layer Height).",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Many machines on the market today will handle a layer height of 100 microns (0.1mm) without a problem.",
+            "text_raw": "Many machines on the market today will handle a layer height of 100 microns (0.1mm) without a problem.",
+            "bullet": "icon_note",
+            "level": 0
+          },
+          {
+            "text": "Remember: a print with layer height 0.1mm will have twice as many layers as a print with a 0.2mm layer height, and will therefore take twice as long to slice and print.",
+            "text_raw": "Remember: a print with layer height 0.1mm will have twice as many layers as a print with a 0.2mm layer height, and will therefore take twice as long to slice and print.",
+            "bullet": "icon_reminder",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53691,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/PSlVmbFhIE2lybLb"
+          }
+        ],
+        "number": 2
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Perimeters (or shells) are also important. A value of 2 here implies that the printer will draw two solid outlines around the edge of the part it's printing, on every layer. I've found that 2 is usually a good place to start, but 3-perimeter prints are common as well.",
+            "text_raw": "Perimeters (or shells) are also important. A value of 2 here implies that the printer will draw two solid outlines around the edge of the part it's printing, on every layer. I've found that 2 is usually a good place to start, but 3-perimeter prints are common as well.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Randomizing the starting point of perimeters will prevent a visual indentation from appearing on the side of your part, so I'd recommend keeping that box checked. Allowing Slic3r to generate extra perimeters when needed is also a good idea.",
+            "text_raw": "Randomizing the starting point of perimeters will prevent a visual indentation from appearing on the side of your part, so I'd recommend keeping that box checked. Allowing Slic3r to generate extra perimeters when needed is also a good idea.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "Solid layers are completely filled in with plastic, which is why it's usually smart to have a few of them on the bottom and top of your part. I'd recommend doing at least two solid layers on the bottom, and stick with at least one on the top.",
+            "text_raw": "Solid layers are completely filled in with plastic, which is why it's usually smart to have a few of them on the bottom and top of your part. I'd recommend doing at least two solid layers on the bottom, and stick with at least one on the top.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Keep in mind that if you're printing a very large part, each solid layer will take up a good chunk of time, so dial those values down if you value print time over part strength.",
+            "text_raw": "Keep in mind that if you're printing a very large part, each solid layer will take up a good chunk of time, so dial those values down if you value print time over part strength.",
+            "bullet": "icon_note",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53809,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/GFCc2cgoeKLHjCqn"
+          },
+          {
+            "imageid": 53753,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/GyKeyeLejQFkA1JA"
+          },
+          {
+            "imageid": 53755,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/YbE6ghRNb3V6LqMY"
+          }
+        ],
+        "number": 3
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "&quot;Fill density&quot; is the percentage of each layer that will be filled in with plastic (0.2 = 20%). You shouldn't have to go above 60% for any reason, unless you want a really dense part. 20% fill is just fine for your everyday prints, but adjust at will and play with the parts once they're complete to feel the difference in structural stability.",
+            "text_raw": "\"Fill density\" is the percentage of each layer that will be filled in with plastic (0.2 = 20%). You shouldn't have to go above 60% for any reason, unless you want a really dense part. 20% fill is just fine for your everyday prints, but adjust at will and play with the parts once they're complete to feel the difference in structural stability.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "A density of 0 will only print the perimeter(s) of your part, so it will be completely hollow.",
+            "text_raw": "A density of 0 will only print the perimeter(s) of your part, so it will be completely hollow.",
+            "bullet": "icon_note",
+            "level": 1
+          },
+          {
+            "text": "The &quot;Fill Pattern&quot; is the path that the extruder takes when doing the infill. These don't have a huge impact on structural stability of the part. The &quot;Top/bottom fill pattern&quot; is the pattern used on the top and bottom solid layers.",
+            "text_raw": "The \"Fill Pattern\" is the path that the extruder takes when doing the infill. These don't have a huge impact on structural stability of the part. The \"Top/bottom fill pattern\" is the pattern used on the top and bottom solid layers.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The advanced settings give you even more control over the infill, although I don't think I've ever touched them. &quot;Infill every 2 layers&quot; will alternate between layers of filled (with the fill density you chose) and hollow. &quot;Infill every 3 layers&quot; will have two hollow layers between every filled layer, etc. I've always left this at 1, the default.",
+            "text_raw": "The advanced settings give you even more control over the infill, although I don't think I've ever touched them. \"Infill every 2 layers\" will alternate between layers of filled (with the fill density you chose) and hollow. \"Infill every 3 layers\" will have two hollow layers between every filled layer, etc. I've always left this at 1, the default.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "You can also choose to insert a solid layer every __ layers, for extra stability. The &quot;Fill angle&quot; is the angle at which the extruder will do its filling paths, based on the axes' orientation of your machine. I don't see how changing this will affect your part very much, but it may have varying levels of impact based on the Fill patterns you use.",
+            "text_raw": "You can also choose to insert a solid layer every __ layers, for extra stability. The \"Fill angle\" is the angle at which the extruder will do its filling paths, based on the axes' orientation of your machine. I don't see how changing this will affect your part very much, but it may have varying levels of impact based on the Fill patterns you use.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "I typically leave &quot;Only retract when crossing perimeters&quot; unchecked, as is default. We'll learn about retraction soon, and then this will make sense.",
+            "text_raw": "I typically leave \"Only retract when crossing perimeters\" unchecked, as is default. We'll learn about retraction soon, and then this will make sense.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53760,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/vN4lPkMX2J63UVhw"
+          },
+          {
+            "imageid": 53759,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/pJL2LDr15DdYDHxf"
+          }
+        ],
+        "number": 4
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Now onto speed! &quot;Perimeter speed&quot; is how fast the perimeters will be printed. 50 is a good place to start. &quot;Small perimeter&quot; speed is how fast small features will be printed. This is typically slower than your normal perimeter speed, to give the plastic more time to cool down.",
+            "text_raw": "Now onto speed! \"Perimeter speed\" is how fast the perimeters will be printed. 50 is a good place to start. \"Small perimeter\" speed is how fast small features will be printed. This is typically slower than your normal perimeter speed, to give the plastic more time to cool down.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "&quot;External perimeters&quot; are the outer perimeters of your part — the most important ones. I'd start with a speed similar to, if not exactly the same, as the standard perimeter speed, and go from there.",
+            "text_raw": "\"External perimeters\" are the outer perimeters of your part — the most important ones. I'd start with a speed similar to, if not exactly the same, as the standard perimeter speed, and go from there.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "&quot;Infill&quot; speed is how fast your machine will print during the infill stage. Since clean lines and extreme accuracy aren't paramount here, crank it up! The speed I'm using here, 80 mm/s, is quite conservative, especially for the Ultimaker, but it's probably a good place to start.",
+            "text_raw": "\"Infill\" speed is how fast your machine will print during the infill stage. Since clean lines and extreme accuracy aren't paramount here, crank it up! The speed I'm using here, 80 mm/s, is quite conservative, especially for the Ultimaker, but it's probably a good place to start.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "&quot;Solid infill&quot; speed is how fast the solid infill layers will be printed. These paths are more important than your everyday infills, so keep this slower than your standard infill speed. Don't bring the speed down too much, however, since 100% infill layers take awhile.",
+            "text_raw": "\"Solid infill\" speed is how fast the solid infill layers will be printed. These paths are more important than your everyday infills, so keep this slower than your standard infill speed. Don't bring the speed down too much, however, since 100% infill layers take awhile.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "The &quot;Top solid infill&quot; speed is how fast the top, 100% filled layer(s) will be printed. Since it's important that these look nice, keep this speed lower than your two other infill speeds.",
+            "text_raw": "The \"Top solid infill\" speed is how fast the top, 100% filled layer(s) will be printed. Since it's important that these look nice, keep this speed lower than your two other infill speeds.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "&quot;Bridges&quot; are used to fill in a gap, where the extruder stretches filament between two walls over air. If the gap's any greater than around 0.5&quot;, you're going to get drooping, no matter how fast you move, but moving quickly will prevent anything major. Printing material and nozzle temperature will have an effect on plastic droop during bridging.",
+            "text_raw": "\"Bridges\" are used to fill in a gap, where the extruder stretches filament between two walls over air. If the gap's any greater than around 0.5\", you're going to get drooping, no matter how fast you move, but moving quickly will prevent anything major. Printing material and nozzle temperature will have an effect on plastic droop during bridging.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "&quot;Travel&quot; speed is the speed at which your machine will move between two extrusion points. Since you'll never be extruding at this time, you might as well crank up the speed here as well. I'd recommend starting at 175 mm/s and moving up from there. Machines that use a light, Bowden extruder (like the Ultimaker) can move as quickly as 300 mm/s.",
+            "text_raw": "\"Travel\" speed is the speed at which your machine will move between two extrusion points. Since you'll never be extruding at this time, you might as well crank up the speed here as well. I'd recommend starting at 175 mm/s and moving up from there. Machines that use a light, Bowden extruder (like the Ultimaker) can move as quickly as 300 mm/s.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "&quot;First layer speed&quot; will modify how quickly your machine prints the first layer. I'd start with 50% and go from there. Read the <a href=\"http://richrap.blogspot.com/2012/01/slic3r-is-nicer-part-2-filament-and.html\" rel=\"nofollow\">second part of Rich's tutorial</a> on getting your first layer to stick.",
+            "text_raw": "\"First layer speed\" will modify how quickly your machine prints the first layer. I'd start with 50% and go from there. Read the [http://richrap.blogspot.com/2012/01/slic3r-is-nicer-part-2-filament-and.html|second part of Rich's tutorial] on getting your first layer to stick.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53811,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/4YkvcFRABJLlyuJe"
+          }
+        ],
+        "number": 5
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "The &quot;Skirt&quot; is an outline around the perimeter of your part, drawn by your printer before it does anything else. This is a great opportunity to &quot;prime&quot; your extruder, make sure your nozzle's at a good height, and kill the print before it gets too far, if any adjustments are needed.",
+            "text_raw": "The \"Skirt\" is an outline around the perimeter of your part, drawn by your printer before it does anything else. This is a great opportunity to \"prime\" your extruder, make sure your nozzle's at a good height, and kill the print before it gets too far, if any adjustments are needed.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "If your extruder typically takes a few seconds before the plastic appears, increase the number of loops, so it will makes its way around your part more than once. Typically, the skirt is kept at one layer high, and anywhere from 3 to 10mm away from the object.",
+            "text_raw": "If your extruder typically takes a few seconds before the plastic appears, increase the number of loops, so it will makes its way around your part more than once. Typically, the skirt is kept at one layer high, and anywhere from 3 to 10mm away from the object.",
+            "bullet": "black",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53710,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/nSe1MKeKFTvrVZUO"
+          },
+          {
+            "imageid": 53765,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/ZNt42AZZOjRqytCX"
+          }
+        ],
+        "number": 6
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Automatically generating support material during slicing will cause your printer to print scaffolding under overhangs and tough angles, giving you better overall results once the support's pulled away. Just check that box, and Slic3r will do all the tough work for you.",
+            "text_raw": "Automatically generating support material during slicing will cause your printer to print scaffolding under overhangs and tough angles, giving you better overall results once the support's pulled away. Just check that box, and Slic3r will do all the tough work for you.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The overhang threshold is the angle past which support will be generated. To prevent the machine from generating support for tiny protrusions that really don't need it, start with 45 degrees.",
+            "text_raw": "The overhang threshold is the angle past which support will be generated. To prevent the machine from generating support for tiny protrusions that really don't need it, start with 45 degrees.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "You can also select a pattern of support, just like you did with the infill, but it's probably more important here, since certain patterns are easier to break away post-print than others. &quot;Rectilinear&quot; is a good place to start.",
+            "text_raw": "You can also select a pattern of support, just like you did with the infill, but it's probably more important here, since certain patterns are easier to break away post-print than others. \"Rectilinear\" is a good place to start.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The pattern spacing will also have a major effect on the structure of the support — a higher value will generate support that's easier to break away. The pattern angle is the angle at which the support will be printed, with respect to the X and Y axes of your machine.",
+            "text_raw": "The pattern spacing will also have a major effect on the structure of the support — a higher value will generate support that's easier to break away. The pattern angle is the angle at which the support will be printed, with respect to the X and Y axes of your machine.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Too low of a pattern spacing will yield support that's more similar to the rest of the part, and will be hard to break away. But, too high of a pattern spacing may not provide enough support for the overhangs.",
+            "text_raw": "Too low of a pattern spacing will yield support that's more similar to the rest of the part, and will be hard to break away. But, too high of a pattern spacing may not provide enough support for the overhangs.",
+            "bullet": "icon_caution",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53716,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/rEQVqBhQnLqiwSPY"
+          },
+          {
+            "imageid": 53771,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/bW1jhPi1D1Y3LjnW"
+          }
+        ],
+        "number": 7
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Notes are useful for your own records, are completely optional, and have no effect on the print. After printing a part and noticing how your changes affected the output, type your notes in here so you know what to change in the future.",
+            "text_raw": "Notes are useful for your own records, are completely optional, and have no effect on the print. After printing a part and noticing how your changes affected the output, type your notes in here so you know what to change in the future.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "You'll only need to mess with &quot;Sequential printing&quot; if you have an automated way to remove parts from the print bed, and want to print many parts in sequence. I've never bothered with changing the &quot;Output file&quot; settings, but they're useful if you'd like create a standard format for GCODE filenames, for example.",
+            "text_raw": "You'll only need to mess with \"Sequential printing\" if you have an automated way to remove parts from the print bed, and want to print many parts in sequence. I've never bothered with changing the \"Output file\" settings, but they're useful if you'd like create a standard format for GCODE filenames, for example.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The &quot;Multiple Extruders&quot; settings are designed for machines with just that — more than one extruder. Here you can specify specific tasks for each extruder, like support and infill.",
+            "text_raw": "The \"Multiple Extruders\" settings are designed for machines with just that — more than one extruder. Here you can specify specific tasks for each extruder, like support and infill.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53718,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/6BLvUjerRFsOkNhM"
+          },
+          {
+            "imageid": 53720,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/LdYaa2ReJja6JBAN"
+          },
+          {
+            "imageid": 53722,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/OBeq3PjNwLrJlu4K"
+          }
+        ],
+        "number": 8
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "I haven't messed with any of the Advanced settings except for the &quot;Extrusion width.&quot; With accurate plastic and nozzle information (which we'll enter later), Slic3r can adjust the height of the extruder to widen the width of extrusion.",
+            "text_raw": "I haven't messed with any of the Advanced settings except for the \"Extrusion width.\" With accurate plastic and nozzle information (which we'll enter later), Slic3r can adjust the height of the extruder to widen the width of extrusion.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "You may want to bump the first layer width up past 100% in order to get the plastic to stick to the bed more efficiently, but I've never felt the need to adjust the other widths.",
+            "text_raw": "You may want to bump the first layer width up past 100% in order to get the plastic to stick to the bed more efficiently, but I've never felt the need to adjust the other widths.",
+            "bullet": "black",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53724,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/muoqNKxtDcl5MsWU"
+          }
+        ],
+        "number": 9
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Now we're moving onto the second main tab, &quot;Filament Settings.&quot; Your machine probably came with some plastic, or you may have bought some other spools in different colors or materials. Your filament is advertised as being 3mm or 1.75mm in diameter, but that's never quite right.",
+            "text_raw": "Now we're moving onto the second main tab, \"Filament Settings.\" Your machine probably came with some plastic, or you may have bought some other spools in different colors or materials. Your filament is advertised as being 3mm or 1.75mm in diameter, but that's never quite right.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "So, take a caliper or micrometer to your filament at a few different positions, and average your readings. Input them into Slic3r.",
+            "text_raw": "So, take a caliper or micrometer to your filament at a few different positions, and average your readings. Input them into Slic3r.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "The &quot;Extrusion multiplier&quot; will simply alter the value you just entered into the &quot;Diameter&quot; box. Unless you have a specific reason to do so, leave this at 1.",
+            "text_raw": "The \"Extrusion multiplier\" will simply alter the value you just entered into the \"Diameter\" box. Unless you have a specific reason to do so, leave this at 1.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Extruder and bed temperature are also very important. You can specify a different temperature for the first layer. If anything, run your extruder hotter than usual to start, to promote extra gooeyness and stickiness.",
+            "text_raw": "Extruder and bed temperature are also very important. You can specify a different temperature for the first layer. If anything, run your extruder hotter than usual to start, to promote extra gooeyness and stickiness.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "For PLA, an extruder temperature of 185 is probably as low as you want to go (This Ultimaker profile is set for PLA printing). For ABS, I'd recommend starting at 220.",
+            "text_raw": "For PLA, an extruder temperature of 185 is probably as low as you want to go (This Ultimaker profile is set for PLA printing). For ABS, I'd recommend starting at 220.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "If you have a heated bed, use it at whatever temperature you feel comfortable with, since anything will help. For PLA, 60 is probably a good place to start, and 110 is good for ABS (although if your bed takes forever to get that hot, dial it down, so you won't have to wait hours for a print to start).",
+            "text_raw": "If you have a heated bed, use it at whatever temperature you feel comfortable with, since anything will help. For PLA, 60 is probably a good place to start, and 110 is good for ABS (although if your bed takes forever to get that hot, dial it down, so you won't have to wait hours for a print to start).",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "If you don't have a heated bed, keep the bed temperature at 0. If it isn't at 0, the print will never start.",
+            "text_raw": "If you don't have a heated bed, keep the bed temperature at 0. If it isn't at 0, the print will never start.",
+            "bullet": "icon_caution",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53989,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/NZCVmp4jTYtRwP1J"
+          },
+          {
+            "imageid": 53781,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/yEQBwfwcyjFxctVl"
+          }
+        ],
+        "number": 10
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Fan settings: If your machine doesn't have a fan directed at the extruder, you can skip this step. If you have a fan, check &quot;Enable cooling&quot; and read the description that pops up — this will intelligently cool the nozzle only when needed, and keep the fan off at all other times.",
+            "text_raw": "Fan settings: If your machine doesn't have a fan directed at the extruder, you can skip this step. If you have a fan, check \"Enable cooling\" and read the description that pops up — this will intelligently cool the nozzle only when needed, and keep the fan off at all other times.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "As you adjust the following settings, refer back to the description under the &quot;Enable cooling&quot; box to see how your edits will change the intelligent cooling activity of the machine during printing.",
+            "text_raw": "As you adjust the following settings, refer back to the description under the \"Enable cooling\" box to see how your edits will change the intelligent cooling activity of the machine during printing.",
+            "bullet": "icon_note",
+            "level": 1
+          },
+          {
+            "text": "&quot;Fan speed&quot; is a percentage, and is really up to you. Do a few prints with cooling enabled and increase the minimum fan speed if you notice that your plastic is drooping or excessively sticking to the nozzle. &quot;Bridges fan speed&quot; is how fast the fan will turn during bridging — keep this high to promote cooling and less drooping.",
+            "text_raw": "\"Fan speed\" is a percentage, and is really up to you. Do a few prints with cooling enabled and increase the minimum fan speed if you notice that your plastic is drooping or excessively sticking to the nozzle. \"Bridges fan speed\" is how fast the fan will turn during bridging — keep this high to promote cooling and less drooping.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "I like  to disable the fan for the first layer to keep the plastic as gooey and liquidy as possible, to keep it stuck to the bed (this is especially popular with PLA printing). You can also check a box to keep the fan on at all times, from print start to end.",
+            "text_raw": "I like  to disable the fan for the first layer to keep the plastic as gooey and liquidy as possible, to keep it stuck to the bed (this is especially popular with PLA printing). You can also check a box to keep the fan on at all times, from print start to end.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The cooling thresholds give you more advanced control over when the fan starts. In general, layers with shorter print times are more difficult for the printer to complete successfully, and therefore benefit most from additional airflow.",
+            "text_raw": "The cooling thresholds give you more advanced control over when the fan starts. In general, layers with shorter print times are more difficult for the printer to complete successfully, and therefore benefit most from additional airflow.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The thresholds to set for decreased printing speed will come with time and lots of experimentation, but I think the times I have here are a good place to start. The &quot;Min print speed&quot; can be set fairly low, and will result in a great variation in print speed during a print with lots of challenges.",
+            "text_raw": "The thresholds to set for decreased printing speed will come with time and lots of experimentation, but I think the times I have here are a good place to start. The \"Min print speed\" can be set fairly low, and will result in a great variation in print speed during a print with lots of challenges.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "You may find that separate cooling thresholds are necessary for different parts, so creating a different slicing profile for each may be the quickest solution. Ex: one for tough columns, one for hollow objects, one for busts (where detail is important), etc.",
+            "text_raw": "You may find that separate cooling thresholds are necessary for different parts, so creating a different slicing profile for each may be the quickest solution. Ex: one for tough columns, one for hollow objects, one for busts (where detail is important), etc.",
+            "bullet": "icon_note",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53728,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/xxXTDnUduonXAHvD"
+          },
+          {
+            "imageid": 53783,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/LOs1R3STMHlLtC1H"
+          }
+        ],
+        "number": 11
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Now we can move onto the Printer Settings tab. Before we start with General settings, break out the ruler. Measure the length and width of your print area, and input the results into the &quot;Bed size&quot; boxes. The &quot;Print center&quot; should be half of the Bed length and width, so the print starts at the exact center of the build platform.",
+            "text_raw": "Now we can move onto the Printer Settings tab. Before we start with General settings, break out the ruler. Measure the length and width of your print area, and input the results into the \"Bed size\" boxes. The \"Print center\" should be half of the Bed length and width, so the print starts at the exact center of the build platform.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The Z offset is at 0mm by default, and should be left there unless you frequently change to a build platform of a different thickness. If, for example, your heated glass platform is removable, you can set the Z offset to its thickness so your machine will automatically adjust for it when you slice a part with that profile.",
+            "text_raw": "The Z offset is at 0mm by default, and should be left there unless you frequently change to a build platform of a different thickness. If, for example, your heated glass platform is removable, you can set the Z offset to its thickness so your machine will automatically adjust for it when you slice a part with that profile.",
+            "bullet": "icon_note",
+            "level": 1
+          },
+          {
+            "text": "The &quot;G-code flavor&quot; should be fine at RepRap (Marlin/Sprinter), but definitely take a look at the drop-down and select the one that most accurately describes your machine. The manufacturer of your machine and the electronics they use will be much more influential in this than I…",
+            "text_raw": "The \"G-code flavor\" should be fine at RepRap (Marlin/Sprinter), but definitely take a look at the drop-down and select the one that most accurately describes your machine. The manufacturer of your machine and the electronics they use will be much more influential in this than I…",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Leave the &quot;Use relative E distances&quot; box unchecked unless you're absolutely sure that your machine uses relative positioning. Most use absolute positioning, which states the end point of the current move in the G-code, regardless of where you are.",
+            "text_raw": "Leave the \"Use relative E distances\" box unchecked unless you're absolutely sure that your machine uses relative positioning. Most use absolute positioning, which states the end point of the current move in the G-code, regardless of where you are.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The &quot;Extruders&quot; number should only be changed from 1 if you have more than one extruder on your machine. If so, go back to the &quot;Multiple Extruders&quot; section of the Print Settings tab and mess with those settings.",
+            "text_raw": "The \"Extruders\" number should only be changed from 1 if you have more than one extruder on your machine. If so, go back to the \"Multiple Extruders\" section of the Print Settings tab and mess with those settings.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53730,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/CJukUGIicPgwoIXI"
+          }
+        ],
+        "number": 12
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Custom G-Code is important, and is probably something that the manufacturer of your machine can help you with more than I can. In general, the &quot;Start G-Code&quot; usually includes commands to zero out all three axes, heat up the extruder and heated bed, do some sort of test extrusion, and start the print.",
+            "text_raw": "Custom G-Code is important, and is probably something that the manufacturer of your machine can help you with more than I can. In general, the \"Start G-Code\" usually includes commands to zero out all three axes, heat up the extruder and heated bed, do some sort of test extrusion, and start the print.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The &quot;End G-Code&quot; typically turns both the extruder and heated bed off, zeros out all three axes again, and lowers the Z platform for easy part removal.",
+            "text_raw": "The \"End G-Code\" typically turns both the extruder and heated bed off, zeros out all three axes again, and lowers the Z platform for easy part removal.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53732,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/SsainYKqPXRkuZqq"
+          }
+        ],
+        "number": 13
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Now onto the &quot;Extruder 1&quot; section of Printer Settings. The &quot;Nozzle diameter&quot; should be provided by your manufacturer, but if not, take a pair of digital calipers to it and measure it yourself. It will most likely be 0.35, 0.4, or 0.5mm. Giving Slic3r this information will allow it to accurately place extrusion paths.",
+            "text_raw": "Now onto the \"Extruder 1\" section of Printer Settings. The \"Nozzle diameter\" should be provided by your manufacturer, but if not, take a pair of digital calipers to it and measure it yourself. It will most likely be 0.35, 0.4, or 0.5mm. Giving Slic3r this information will allow it to accurately place extrusion paths.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Don't bother with &quot;Extruder offset&quot; unless you have more than one extruder. If you do, this is the horizontal and vertical distance between your extruders.",
+            "text_raw": "Don't bother with \"Extruder offset\" unless you have more than one extruder. If you do, this is the horizontal and vertical distance between your extruders.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Since there's so much to talk about when it comes to retraction, I'm devoting the whole next step to it…",
+            "text_raw": "Since there's so much to talk about when it comes to retraction, I'm devoting the whole next step to it…",
+            "bullet": "icon_note",
+            "level": 0
+          },
+          {
+            "text": "But before you go there, check out <a href=\"http://www.youtube.com/watch?v=b9pbe6IZs0Y\" rel=\"nofollow\">this video</a> of a custom Ultimaker extruder retracting, so you can get an idea of what it's all about.",
+            "text_raw": "But before you go there, check out [http://www.youtube.com/watch?v=b9pbe6IZs0Y|this video] of a custom Ultimaker extruder retracting, so you can get an idea of what it's all about.",
+            "bullet": "black",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53734,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/gKAn6MWG66S2Dylx"
+          }
+        ],
+        "number": 14
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Retraction is one of the coolest features in Slic3r, and will greatly improve the quality of your prints. By retracting the hot filament with the extruder motor during travel moves, plastic oozing is prevented. The length of filament to retract before moving to the next extrusion path will depend wildly on the motor and gearing you have.",
+            "text_raw": "Retraction is one of the coolest features in Slic3r, and will greatly improve the quality of your prints. By retracting the hot filament with the extruder motor during travel moves, plastic oozing is prevented. The length of filament to retract before moving to the next extrusion path will depend wildly on the motor and gearing you have.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "If you have no idea what to put here, I'd recommend starting with 0.75mm and moving up from there if you notice that you're still getting stringing between gaps. The value I'm using here is so high because of the Ultimaker's extruder gearing.",
+            "text_raw": "If you have no idea what to put here, I'd recommend starting with 0.75mm and moving up from there if you notice that you're still getting stringing between gaps. The value I'm using here is so high because of the Ultimaker's extruder gearing.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "&quot;Lift Z&quot; will raise the extruder (or lower the bed) during retraction and before moving to the next path, where it will lower, in order to avoid knocking the part off the platform or dragging plastic with it. If you're building tall parts that may get knocked off the platform easily, set this to one layer height. If not, I would leave this at 0.",
+            "text_raw": "\"Lift Z\" will raise the extruder (or lower the bed) during retraction and before moving to the next path, where it will lower, in order to avoid knocking the part off the platform or dragging plastic with it. If you're building tall parts that may get knocked off the platform easily, set this to one layer height. If not, I would leave this at 0.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "&quot;Speed&quot; is how quickly your extruder motor will reverse to retract the filament. You want this to be quick, so do some tests with your extruder and see just how fast you can retract. I'd recommend starting at 15mm/s and building up from there, since once again, extruders will differ wildly in gearing and motor speed.",
+            "text_raw": "\"Speed\" is how quickly your extruder motor will reverse to retract the filament. You want this to be quick, so do some tests with your extruder and see just how fast you can retract. I'd recommend starting at 15mm/s and building up from there, since once again, extruders will differ wildly in gearing and motor speed.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "&quot;Extra length on restart&quot; is the length of plastic you'd like to extrude after travelling to a new path and prior to moving again. I don't use it, since it would just put extra plastic down where I don't necessarily need it.",
+            "text_raw": "\"Extra length on restart\" is the length of plastic you'd like to extrude after travelling to a new path and prior to moving again. I don't use it, since it would just put extra plastic down where I don't necessarily need it.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The only application for this may be when your extruder has serious problems starting up again after retraction, but in that case I'd just recommend dialing down your retraction length and/or speed. So yeah, leave this at 0.",
+            "text_raw": "The only application for this may be when your extruder has serious problems starting up again after retraction, but in that case I'd just recommend dialing down your retraction length and/or speed. So yeah, leave this at 0.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "&quot;Minimum travel after retraction&quot; is the minimum distance required for the printer to retract at all between paths. In this case, if the two paths are closer than 3mm, the extruder won't retract, to prevent the motor from doing tons of unnecessary work during an extremely complicated print. I think 2mm is a good place to start.",
+            "text_raw": "\"Minimum travel after retraction\" is the minimum distance required for the printer to retract at all between paths. In this case, if the two paths are closer than 3mm, the extruder won't retract, to prevent the motor from doing tons of unnecessary work during an extremely complicated print. I think 2mm is a good place to start.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The last two settings here are for multi-extruder setups. When one of the extruders is disabled, you can have it retract to prevent it from oozing while the other's working. You can also add extra length on restart here, where it may have more use, since extruders in a multi setup are often idle for longer and may require additional &quot;priming&quot;.",
+            "text_raw": "The last two settings here are for multi-extruder setups. When one of the extruders is disabled, you can have it retract to prevent it from oozing while the other's working. You can also add extra length on restart here, where it may have more use, since extruders in a multi setup are often idle for longer and may require additional \"priming\".",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53801,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/2aEiIrLFoZBjAcCA"
+          }
+        ],
+        "number": 15
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "Now we can finally move back to the Plater tab! Load a part by clicking &quot;Add&quot;, or dragging it into the grid on the left. The part will automatically snap to the center of your build platform.",
+            "text_raw": "Now we can finally move back to the Plater tab! Load a part by clicking \"Add\", or dragging it into the grid on the left. The part will automatically snap to the center of your build platform.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "You can add additional parts in the same manner, and then duplicate them by clicking &quot;More&quot; after selecting them (selected parts will be red). They'll be automatically arranged as you add them onto the plate.",
+            "text_raw": "You can add additional parts in the same manner, and then duplicate them by clicking \"More\" after selecting them (selected parts will be red). They'll be automatically arranged as you add them onto the plate.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "You can also rotate the parts with the &quot;45° ccw,&quot; &quot;45° cw,&quot; and &quot;Rotate…&quot; buttons. Clicking &quot;Rotate…&quot; will bring up a text box, into which you can enter a specific angle. Scaling is also possible with the &quot;Scale…&quot; button, and works similarly to the &quot;Rotate…&quot; button.",
+            "text_raw": "You can also rotate the parts with the \"45° ccw,\" \"45° cw,\" and \"Rotate…\" buttons. Clicking \"Rotate…\" will bring up a text box, into which you can enter a specific angle. Scaling is also possible with the \"Scale…\" button, and works similarly to the \"Rotate…\" button.",
+            "bullet": "black",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53738,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/QKZA5oOuFsIFhEYf"
+          },
+          {
+            "imageid": 53740,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/NlXcF5WEumKWayO4"
+          },
+          {
+            "imageid": 53803,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/A1nxVkHvsLyNCjFP"
+          }
+        ],
+        "number": 16
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "If you import an assembly of multiple .STLs, like this &quot;nautilus_plate&quot; (file <a href=\"http://www.thingiverse.com/thing:27551\" rel=\"nofollow\">here</a>), you can split it up into its separate .STLs with the &quot;Split&quot; button.",
+            "text_raw": "If you import an assembly of multiple .STLs, like this \"nautilus_plate\" (file [http://www.thingiverse.com/thing:27551|here]), you can split it up into its separate .STLs with the \"Split\" button.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "This is useful if you needed to print a few extra gears, but also wanted to print a single piece of the other .STLs as well.",
+            "text_raw": "This is useful if you needed to print a few extra gears, but also wanted to print a single piece of the other .STLs as well.",
+            "bullet": "black",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53744,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/jsvwkCeJe4qUdYhL"
+          },
+          {
+            "imageid": 53746,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/kRyXELXRtHTQhfuA"
+          },
+          {
+            "imageid": 53745,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/kSLm2jyRmaMFvAmY"
+          }
+        ],
+        "number": 17
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "That's it! Enjoy using Slic3r.",
+            "text_raw": "That's it! Enjoy using Slic3r.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "I don't want this to be a once-and-done thing, so please email me (eweinhoffer@oreilly.com) or post a comment here if you have any suggestions on how to make this tutorial better.",
+            "text_raw": "I don't want this to be a once-and-done thing, so please email me (eweinhoffer@oreilly.com) or post a comment here if you have any suggestions on how to make this tutorial better.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "If you'd like to contribute any related photos, that would be helpful as well, since this is a bit too text-heavy for my tastes. :P",
+            "text_raw": "If you'd like to contribute any related photos, that would be helpful as well, since this is a bit too text-heavy for my tastes. :P",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "The free in-browser G-code viewer used for a few of the photos is by Jeremy Herrman, and can be found <a href=\"http://jherrm.github.com/gcode-viewer/\" rel=\"nofollow\">here</a>.",
+            "text_raw": "The free in-browser G-code viewer used for a few of the photos is by Jeremy Herrman, and can be found [http://jherrm.github.com/gcode-viewer/|here].",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "All test prints used in this demo can be found on the <a href=\"http://makezine.com/3dprinting\">MAKE 3D Printing page</a>.",
+            "text_raw": "All test prints used in this demo can be found on the [http://makezine.com/3dprinting|MAKE 3D Printing page].",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The Ultimaker Slic3r profile used can be found <a href=\"https://www.dropbox.com/s/nv7ar3w9p2aw2tg/Ultimaker.ini\" rel=\"nofollow\">here</a>.",
+            "text_raw": "The Ultimaker Slic3r profile used can be found [https://www.dropbox.com/s/nv7ar3w9p2aw2tg/Ultimaker.ini|here].",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 53807,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/4MnfYSBstCpAt2u4"
+          }
+        ],
+        "number": 18
+      }
+    ],
+    "subject": "",
+    "summary": "Slic3r is a free program that converts .STL files into .GCODE files for 3D Printing.",
+    "time_required": "As long as you're willing to spend.",
+    "title": "Getting Started With Slic3r",
+    "tools": [],
+    "type": "project"
+  },
+  "guideid": "2906"
+}

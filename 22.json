@@ -1,0 +1,506 @@
+{
+  "device": "Circuits",
+  "url": "http://makeprojects.com/Project/Solar+Joule+Bracelet/22/1",
+  "guide": {
+    "author": {
+      "text": "Edwin Wise",
+      "userid": 74
+    },
+    "categories": [
+      "Circuits",
+      "Jewelry"
+    ],
+    "conclusion": "<p><strong>This project originally appeared in <a href=\"http://www.makezine.com/19/\">MAKE Volume 19</a>.</strong></p>\n\n<p><strong>Related Posts on Make: Online:</strong></p>",
+    "difficulty": "Moderate",
+    "documents": [],
+    "flags": [
+      {
+        "title": "From MAKE Magazine",
+        "flagid": "FROM_MAKE",
+        "text": "This project first appeared on the pages of MAKE magazine."
+      },
+      {
+        "title": "Weekend Project",
+        "flagid": "GUIDE_SPONSOR_RADIO_SHACK",
+        "text": "This project is part of RadioShack's The Great Create."
+      }
+    ],
+    "guideid": 22,
+    "image": {
+      "imageid": 43985,
+      "text": "http://guide-images.makeprojects.org/igi/XOjCoLd1NHNhSyeW"
+    },
+    "introduction": "<div class=\"videoBox_center\" style=\"width:592px;\"><iframe class=\"youtube-player\" type=\"text/html\" width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/ghB2irHIN8I?wmode=opaque\" frameborder=\"0\"></iframe></div>\n\n<p>My wife fell in love with Alice Planas and Hatti Lim's glowing bracelet project from <a href=\"http://www.makershed.com/product_p/0596518196.htm\">CRAFT Volume 06</a> (&quot;Solar Jewelry,&quot; page 123), so of course we had to make one. I built the circuit and she did the fabric, and it came out nicely, but I felt it could be brighter. So I decided to combine the solar jewelry idea with a Joule Thief circuit, which converts low voltages into short bursts of voltage high enough to light an LED.</p>\n\n<p>This project is the result: the Solar Joule, which combines Solar Jewelry with a Joule Thief. (Note that the <em>joule</em> is a standard measure of energy, and is pronounced like <em>jewel</em>.)</p>\n\n<h3 id=\"Section_Joule_Thief_Theory\">Joule Thief Theory</h3>\n\n<p>The Joule Thief circuit is a fairly simple way of converting very low voltages, like from dead batteries, into an oscillating voltage that's high enough to do something useful. There are many versions online (for example, see <a href=\"http://www.bigclive.com/joule.htm\" rel=\"nofollow\">bigclive.com/joule.htm</a>). The heart of the circuit is a pair of inductor coils wound together into a transformer or choke. When current runs into one coil of a choke, it's resisted until it builds up a magnetic field, which then draws current through the other coil, going in the opposite direction. In the Joule Thief, one coil provides the kick of voltage that overcomes the LED’s forward voltage requirement, and the other generates feedback that drives a transistor into oscillations.</p>",
+    "introduction_rendered": "<div class=\"videoBox_center\" style=\"width:592px;\"><iframe class=\"youtube-player\" type=\"text/html\" width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/ghB2irHIN8I?wmode=opaque\" frameborder=\"0\"></iframe></div>\n\n<p>My wife fell in love with Alice Planas and Hatti Lim's glowing bracelet project from <a href=\"http://www.makershed.com/product_p/0596518196.htm\">CRAFT Volume 06</a> (&quot;Solar Jewelry,&quot; page 123), so of course we had to make one. I built the circuit and she did the fabric, and it came out nicely, but I felt it could be brighter. So I decided to combine the solar jewelry idea with a Joule Thief circuit, which converts low voltages into short bursts of voltage high enough to light an LED.</p>\n\n<p>This project is the result: the Solar Joule, which combines Solar Jewelry with a Joule Thief. (Note that the <em>joule</em> is a standard measure of energy, and is pronounced like <em>jewel</em>.)</p>\n\n<h3 id=\"Section_Joule_Thief_Theory\">Joule Thief Theory</h3>\n\n<p>The Joule Thief circuit is a fairly simple way of converting very low voltages, like from dead batteries, into an oscillating voltage that's high enough to do something useful. There are many versions online (for example, see <a href=\"http://www.bigclive.com/joule.htm\" rel=\"nofollow\">bigclive.com/joule.htm</a>). The heart of the circuit is a pair of inductor coils wound together into a transformer or choke. When current runs into one coil of a choke, it's resisted until it builds up a magnetic field, which then draws current through the other coil, going in the opposite direction. In the Joule Thief, one coil provides the kick of voltage that overcomes the LED’s forward voltage requirement, and the other generates feedback that drives a transistor into oscillations.</p><div class=\"parts\"><strong>Relevant parts</strong><ul><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2049742\">Wire</a></li><li><a href=\"http://make.dozuki.com/Item/Photodiodes\">Photodiodes</a></li><li><a href=\"http://make.dozuki.com/Item/Supercapacitor\">Supercapacitor</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=12673853\">Schottky signal diode</a></li><li><a href=\"http://elcodis.com/parts/456321/CC2824E513R-10.html\">Common-mode choke</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062586\">Transistor</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2994580&amp;amp;filterName=Brand&amp;amp;filterValue=RadioShack\">Resistor</a></li><li><a href=\"http://make.dozuki.com/Item/Capacitor\">Capacitor</a></li><li><a href=\"http://www.radioshack.com/family/index.jsp?categoryId=2032298\">LED</a></li><li><a href=\"http://make.dozuki.com/Item/Fabric\">Fabric</a></li></ul></div><div class=\"tools\"><strong>Tools</strong><ul><li><a href=\"http://make.dozuki.com/Item/Bolt\">Bolt</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=4214667\">Digital multimeter</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3932543\">Gauged wire cutter</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3932531\">Pliers</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3086619\">Soldering iron</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3928375\">Third-hand tool</a></li></ul></div>",
+    "locale": "en",
+    "parts": [
+      {
+        "text": "Wire",
+        "notes": "from RadioShack",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=2049742",
+        "thumbnail": ""
+      },
+      {
+        "text": "Photodiodes",
+        "notes": "such as manufacturer #BPW34",
+        "url": "http://make.dozuki.com/Item/Photodiodes",
+        "thumbnail": ""
+      },
+      {
+        "text": "Supercapacitor",
+        "notes": "such as manufacturer #EDLSD224V5R5C",
+        "url": "http://make.dozuki.com/Item/Supercapacitor",
+        "thumbnail": ""
+      },
+      {
+        "text": "Schottky signal diode",
+        "notes": "from RadioShack",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=12673853",
+        "thumbnail": ""
+      },
+      {
+        "text": "Common-mode choke",
+        "notes": "such as manufacturer #CC2824E513R-10",
+        "url": "http://elcodis.com/parts/456321/CC2824E513R-10.html",
+        "thumbnail": ""
+      },
+      {
+        "text": "Transistor",
+        "notes": "from RadioShack",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=2062586",
+        "thumbnail": ""
+      },
+      {
+        "text": "Resistor",
+        "notes": "from RadioShack",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=2994580&amp;filterName=Brand&amp;filterValue=RadioShack",
+        "thumbnail": ""
+      },
+      {
+        "text": "Capacitor",
+        "notes": "(optional) such as manufacturer #C114C103K5R5CA",
+        "url": "http://make.dozuki.com/Item/Capacitor",
+        "thumbnail": ""
+      },
+      {
+        "text": "LED",
+        "notes": "from RadioShack",
+        "url": "http://www.radioshack.com/family/index.jsp?categoryId=2032298",
+        "thumbnail": ""
+      },
+      {
+        "text": "Fabric",
+        "notes": "or other bracelet material; for mounting",
+        "url": "http://make.dozuki.com/Item/Fabric",
+        "thumbnail": ""
+      }
+    ],
+    "prereqs": [],
+    "steps": [
+      {
+        "title": "How the feedback works.",
+        "lines": [
+          {
+            "text": "Here’s the feedback diagram. When you first connect power to the circuit, the transistor is off. There is no magnetic field in the choke, and there’s not enough power to turn on the LED. Some power leaks through the resistor into the transistor’s base, turning it on a little bit. This lets a small amount of current run backward through inductor coil 1–2 of the choke, creating a small expanding magnetic field. As a result, current is forced through inductor 3–4, which turns the transistor on even more. This positive feedback loop continues until the transistor is completely activated.",
+            "text_raw": "Here’s the feedback diagram. When you first connect power to the circuit, the transistor is off. There is no magnetic field in the choke, and there’s not enough power to turn on the LED. Some power leaks through the resistor into the transistor’s base, turning it on a little bit. This lets a small amount of current run backward through inductor coil 1–2 of the choke, creating a small expanding magnetic field. As a result, current is forced through inductor 3–4, which turns the transistor on even more. This positive feedback loop continues until the transistor is completely activated.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Once the transistor is done opening, the current through 1–2 stops increasing, so the magnetic field stops expanding and the current through 4–3 equalizes. This causes the transistor to close a little bit, which initiates a feedback loop in the opposite direction. Current reverses through 4–3, which closes the transistor and draws current through 1–2. When the transistor shuts off, the inductor’s magnetic field winds down and unloads a blob of charge at pin 2. Once this exceeds the LED’s forward voltage, the LED lights up. The current is quickly exhausted.",
+            "text_raw": "Once the transistor is done opening, the current through 1–2 stops increasing, so the magnetic field stops expanding and the current through 4–3 equalizes. This causes the transistor to close a little bit, which initiates a feedback loop in the opposite direction. Current reverses through 4–3, which closes the transistor and draws current through 1–2. When the transistor shuts off, the inductor’s magnetic field winds down and unloads a blob of charge at pin 2. Once this exceeds the LED’s forward voltage, the LED lights up. The current is quickly exhausted.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "The capacitor between the resistor and the choke provides a little “spring” to the feedback action, speeding it up and buffering some of the voltage changes across inductor 4–3.",
+            "text_raw": "The capacitor between the resistor and the choke provides a little “spring” to the feedback action, speeding it up and buffering some of the voltage changes across inductor 4–3.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 43694,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/eOphPOqjMdImJOpx"
+          }
+        ],
+        "number": 1
+      },
+      {
+        "title": "Build the solar battery.",
+        "lines": [
+          {
+            "text": "The solar battery is a series of photodiodes bridged by a supercapacitor that stores the energy they collect. The photodiodes also act as the links in the chain bracelet, and I connected them with loops of wire to provide some spring and make it easy to sew them onto fabric.",
+            "text_raw": "The solar battery is a series of photodiodes bridged by a supercapacitor that stores the energy they collect. The photodiodes also act as the links in the chain bracelet, and I connected them with loops of wire to provide some spring and make it easy to sew them onto fabric.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 43693,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/1tuSL4ex3SvNitJt"
+          }
+        ],
+        "number": 2
+      },
+      {
+        "title": "Make the photodiode chain.",
+        "lines": [
+          {
+            "text": "To make the loops, wind solid wire around a small bolt (image 1), cut it at every other turn, and re-bend the ends of each loop into small solderable hooks (image 2).",
+            "text_raw": "To make the loops, wind solid wire around a small bolt (image 1), cut it at every other turn, and re-bend the ends of each loop into small solderable hooks (image 2).",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "TIP: Use a second pair of pliers to hold the screw, and try cutting at every third turn if your loops are too small too work with comfortably.",
+            "text_raw": "TIP: Use a second pair of pliers to hold the screw, and try cutting at every third turn if your loops are too small too work with comfortably.",
+            "bullet": "icon_note",
+            "level": 0
+          },
+          {
+            "text": "Solder 10 (or more) photodiodes in series, + to – (image 3). The silver stripe on each diode’s face indicates the + side. (If you want to go crazy, make 2 strips of photodiodes and connect them in parallel, side by side, + to + and – to –.)",
+            "text_raw": "Solder 10 (or more) photodiodes in series, + to – (image 3). The silver stripe on each diode’s face indicates the + side. (If you want to go crazy, make 2 strips of photodiodes and connect them in parallel, side by side, + to + and – to –.)",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 353,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/wewQOyYqDvssXUPG"
+          },
+          {
+            "imageid": 352,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/j3T1iuckGGyitlkM"
+          },
+          {
+            "imageid": 351,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/pWpawZxqfRk6CiFS"
+          }
+        ],
+        "number": 3
+      },
+      {
+        "title": "Add the supercap and Schottky diode.",
+        "lines": [
+          {
+            "text": "Solder the Schottky diode to the + end of the series, with the diode's black stripe (the – end) pointing away from the PIN photodiodes.",
+            "text_raw": "Solder the Schottky diode to the + end of the series, with the diode's black stripe (the – end) pointing away from the PIN photodiodes.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "NOTE: The Schottky ensures that power flows into the capacitor when the photodiodes are in bright light, but won’t flow back out when they’re dark. Any diode will work here, but a Schottky diode consumes less voltage in the forward direction, saving more for the LED.",
+            "text_raw": "NOTE: The Schottky ensures that power flows into the capacitor when the photodiodes are in bright light, but won’t flow back out when they’re dark. Any diode will work here, but a Schottky diode consumes less voltage in the forward direction, saving more for the LED.",
+            "bullet": "icon_note",
+            "level": 0
+          },
+          {
+            "text": "Solder in the supercapacitor, with its + side connected at the signal diode and its – side (marked with an arrow) connected with a wire lead all the way at the other end of the PIN diodes.",
+            "text_raw": "Solder in the supercapacitor, with its + side connected at the signal diode and its – side (marked with an arrow) connected with a wire lead all the way at the other end of the PIN diodes.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Finally, solder a wire to each end of the capacitor, to connect to the Joule Thief later, and set the solar battery in the sun.",
+            "text_raw": "Finally, solder a wire to each end of the capacitor, to connect to the Joule Thief later, and set the solar battery in the sun.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Be careful not to desolder the diode when you're soldering the extra leads to the capacitor.",
+            "text_raw": "Be careful not to desolder the diode when you're soldering the extra leads to the capacitor.",
+            "bullet": "icon_caution",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 355,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/BWXpwBUgfeOU3R5D"
+          }
+        ],
+        "number": 4
+      },
+      {
+        "title": "Build the Joule Thief.",
+        "lines": [
+          {
+            "text": "Many versions of the Joule Thief circuit have you winding the transformer yourself, but since I’m lazy, I bought one. A common-mode choke, it’s a surface-mount device (thus, very small) with a ferrite core. The white dot on top indicates pin 1, and the pins are numbered clockwise.",
+            "text_raw": "Many versions of the Joule Thief circuit have you winding the transformer yourself, but since I’m lazy, I bought one. A common-mode choke, it’s a surface-mount device (thus, very small) with a ferrite core. The white dot on top indicates pin 1, and the pins are numbered clockwise.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Start by bending the emitter pin (E) on the NPN transistor back 90° away from the flat side.",
+            "text_raw": "Start by bending the emitter pin (E) on the NPN transistor back 90° away from the flat side.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Then bend the collector pin (C) and base pin (B) so that you can solder C to pin 2 of the choke, and B to pin 4. (Note where pins 1 and 4 go when you turn the choke upside down.)",
+            "text_raw": "Then bend the collector pin (C) and base pin (B) so that you can solder C to pin 2 of the choke, and B to pin 4. (Note where pins 1 and 4 go when you turn the choke upside down.)",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 43815,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/ZlB56XsTUSQeFJGT"
+          }
+        ],
+        "number": 5
+      },
+      {
+        "title": "Add a resistor.",
+        "lines": [
+          {
+            "text": "Position the resistor across the base pin, bending its leads down the sides of the choke, and solder it between pins 1 and 3.",
+            "text_raw": "Position the resistor across the base pin, bending its leads down the sides of the choke, and solder it between pins 1 and 3.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Trim the pin 3 lead, but leave the pin 1 lead long to connect to the battery’s positive (+) terminal. Any resistor from 1K to 3K should work. (A larger one will be more efficient, but I happened to have a 1K resistor on hand.)",
+            "text_raw": "Trim the pin 3 lead, but leave the pin 1 lead long to connect to the battery’s positive (+) terminal. Any resistor from 1K to 3K should work. (A larger one will be more efficient, but I happened to have a 1K resistor on hand.)",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 358,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/FUuypUqknv1oI2YE"
+          }
+        ],
+        "number": 6
+      },
+      {
+        "title": "Add the axial capacitor.",
+        "lines": [
+          {
+            "text": "Flip the assembly over and solder the axial capacitor between pin 3 (or the resistor lead connected to it) and the transistor’s emitter pin. This capacitor isn’t required for the circuit to work, but speeds it up and increases efficiency. An axial capacitor fits better here than a regular disc-shaped cap would, making the circuit more compact.",
+            "text_raw": "Flip the assembly over and solder the axial capacitor between pin 3 (or the resistor lead connected to it) and the transistor’s emitter pin. This capacitor isn’t required for the circuit to work, but speeds it up and increases efficiency. An axial capacitor fits better here than a regular disc-shaped cap would, making the circuit more compact.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 349,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/fdiMtLPYsSFZAKb2"
+          }
+        ],
+        "number": 7
+      },
+      {
+        "title": "Add the LED jewel.",
+        "lines": [
+          {
+            "text": "Bend out the LED’s shorter cathode lead (–).",
+            "text_raw": "Bend out the LED’s shorter cathode lead (–).",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Solder the anode lead (+) to the choke’s pin 2 or transistor’s collector. Solder the cathode to the transistor’s emitter, which should be conveniently poking up.",
+            "text_raw": "Solder the anode lead (+) to the choke’s pin 2 or transistor’s collector. Solder the cathode to the transistor’s emitter, which should be conveniently poking up.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Trim the LED’s anode but leave the cathode lead long.",
+            "text_raw": "Trim the LED’s anode but leave the cathode lead long.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 347,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/kjVUPVWyITHxgJOn"
+          }
+        ],
+        "number": 8
+      },
+      {
+        "title": "Connect the Joule Thief to the solar battery.",
+        "lines": [
+          {
+            "text": "Using wires or alligator clips, wire the Joule Thief and the solar battery together, + to + and – to –. (The Joule Thief's positive side is where the resistor and LED come together; its negative side is where the transistor and axial capacitor meet.) The LED should glow!",
+            "text_raw": "Using wires or alligator clips, wire the Joule Thief and the solar battery together, + to + and – to –. (The Joule Thief's positive side is where the resistor and LED come together; its negative side is where the transistor and axial capacitor meet.) The LED should glow!",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "NOTE: If you watch the LED’s positive lead with an oscilloscope, you should see it pulsing up to the LED’s forward voltage at 300kHz to 500kHz. Since that’s too fast for your eyes to discern, it looks like a steady glow.",
+            "text_raw": "NOTE: If you watch the LED’s positive lead with an oscilloscope, you should see it pulsing up to the LED’s forward voltage at 300kHz to 500kHz. Since that’s too fast for your eyes to discern, it looks like a steady glow.",
+            "bullet": "icon_note",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 361,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/NArCuJXOWk4SBwev"
+          }
+        ],
+        "number": 9
+      },
+      {
+        "title": "Troubleshoot.",
+        "lines": [
+          {
+            "text": "Use a voltmeter to confirm that your solar battery has a charge. It doesn’t take much! Half a volt or more is plenty.",
+            "text_raw": "Use a voltmeter to confirm that your solar battery has a charge. It doesn’t take much! Half a volt or more is plenty.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "If there’s no voltage from the solar battery, make sure the signal diode and capacitor are both oriented in the right direction.",
+            "text_raw": "If there’s no voltage from the solar battery, make sure the signal diode and capacitor are both oriented in the right direction.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "NOTE: It may take many minutes to charge the cap the first time in bright sunlight, and maybe hours in indoor light.",
+            "text_raw": "NOTE: It may take many minutes to charge the cap the first time in bright sunlight, and maybe hours in indoor light.",
+            "bullet": "icon_note",
+            "level": 0
+          },
+          {
+            "text": "If you have voltage but no light, make sure the Joule Thief is connected to the battery the right way. Check that the LED is in the right direction, the inductors in the choke are wired correctly (which is to say, opposite from each other), and that the transistor’s emitter connects to the battery’s negative side and its collector connects to the choke’s pin 2.",
+            "text_raw": "If you have voltage but no light, make sure the Joule Thief is connected to the battery the right way. Check that the LED is in the right direction, the inductors in the choke are wired correctly (which is to say, opposite from each other), and that the transistor’s emitter connects to the battery’s negative side and its collector connects to the choke’s pin 2.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 360,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/KQj6aX2LqZ1XFGHR"
+          }
+        ],
+        "number": 10
+      },
+      {
+        "title": "Mount your Solar Joule on a bracelet.",
+        "lines": [
+          {
+            "text": "The final part of the project is up to you: a crafty mounting that you provide for the 2 parts. That’s up to your imagination!",
+            "text_raw": "The final part of the project is up to you: a crafty mounting that you provide for the 2 parts. That’s up to your imagination!",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "We laid out the parts with the LED jewel at the head of the caterpillar of photodiodes. Then we sewed it to a simple cuff of neoprene salvaged from a laptop sleeve. Felt works great too and is easier to work with.",
+            "text_raw": "We laid out the parts with the LED jewel at the head of the caterpillar of photodiodes. Then we sewed it to a simple cuff of neoprene salvaged from a laptop sleeve. Felt works great too and is easier to work with.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Here the LED's free lead is used as one-half of the &quot;clasp&quot; to connect the circuit, but you could strengthen or extend these connections any way you want, depending on your design.",
+            "text_raw": "Here the LED's free lead is used as one-half of the \"clasp\" to connect the circuit, but you could strengthen or extend these connections any way you want, depending on your design.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Plan ahead and you can lay out the parts of the circuit in almost any shape you can bend in the solid wire!",
+            "text_raw": "Plan ahead and you can lay out the parts of the circuit in almost any shape you can bend in the solid wire!",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 43886,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/tHSsP13nZnmoMFrq"
+          },
+          {
+            "imageid": 43957,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/v2Yt45tiiXv3gEaQ"
+          },
+          {
+            "imageid": 43959,
+            "orderby": 3,
+            "text": "http://guide-images.makeprojects.org/igi/hWWZjP5uA1TPxrDm"
+          }
+        ],
+        "number": 11
+      }
+    ],
+    "subject": "",
+    "summary": "Solar-cell links are cleverly boosted to drive an LED jewel.",
+    "time_required": "2 hours",
+    "title": "Solar Joule Bracelet",
+    "tools": [
+      {
+        "text": "Bolt",
+        "notes": "",
+        "url": "http://make.dozuki.com/Item/Bolt",
+        "thumbnail": ""
+      },
+      {
+        "text": "Digital multimeter",
+        "notes": "from RadioShack",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=4214667",
+        "thumbnail": ""
+      },
+      {
+        "text": "Gauged wire cutter",
+        "notes": "from RadioShack",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=3932543",
+        "thumbnail": ""
+      },
+      {
+        "text": "Pliers",
+        "notes": "from RadioShack. A second pair is handy for twisting the wire links.",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=3932531",
+        "thumbnail": ""
+      },
+      {
+        "text": "Soldering iron",
+        "notes": "from RadioShack",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=3086619",
+        "thumbnail": ""
+      },
+      {
+        "text": "Third-hand tool",
+        "notes": "from RadioShack",
+        "url": "http://www.radioshack.com/product/index.jsp?productId=3928375",
+        "thumbnail": ""
+      }
+    ],
+    "type": "project"
+  },
+  "guideid": "22"
+}

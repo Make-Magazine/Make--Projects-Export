@@ -1,0 +1,360 @@
+{
+  "device": "Welding",
+  "url": "http://makeprojects.com/Project/Welding+Primer/2/1",
+  "guide": {
+    "author": {
+      "text": "Mister Jalopy",
+      "userid": 80
+    },
+    "categories": [
+      "Welding",
+      "Metalworking"
+    ],
+    "conclusion": "<p><strong>This primer first appeared in <a href=\"http://www.makezine.com/03\">MAKE Volume 03</a>, page 158.</strong></p>",
+    "difficulty": "Moderate",
+    "documents": [],
+    "flags": [
+      {
+        "title": "From MAKE Magazine",
+        "flagid": "FROM_MAKE",
+        "text": "This project first appeared on the pages of MAKE magazine."
+      }
+    ],
+    "guideid": 2,
+    "image": {
+      "imageid": 129,
+      "text": "http://guide-images.makeprojects.org/igi/Cr56uQcFvE53YQVF"
+    },
+    "introduction": "<p>If you need metal stuck together, there is no quicker path than buying a portable 110-volt wire-feed welder.</p>\n\n<p>Being a snob, I used to scoff at these small welders as not being serious machines. Then I started seeing them everywhere — at every auto body shop and every metal gate installer; even hooked up to a generator at drag races.</p>\n\n<p>Having used a Lincoln 135 Plus wire-feed welder (about $600) for a month or two, I’m not scoffing any longer. Granted, it is not structural. You can’t weld a bridge, skyscraper, or engine mounts to a car frame. But you can weld steel up to 3/16ths, which is thick enough to make furniture, wrought iron gates, and bad art.</p>\n\n<p>The beauty of the small Lincoln welders is they are light and portable. And when you get to wherever you are going, you can plug them into a standard 110-volt 20-amp outlet. If you use the flux core kit, you don’t even have to carry around a tank of compressed shielding gas.</p>\n\n<p>This article is not a replacement for the manual or the many excellent books devoted to welding. This is a primer to explain the process and show how you can be a welder by the end of the weekend.</p>",
+    "introduction_rendered": "<p>If you need metal stuck together, there is no quicker path than buying a portable 110-volt wire-feed welder.</p>\n\n<p>Being a snob, I used to scoff at these small welders as not being serious machines. Then I started seeing them everywhere — at every auto body shop and every metal gate installer; even hooked up to a generator at drag races.</p>\n\n<p>Having used a Lincoln 135 Plus wire-feed welder (about $600) for a month or two, I’m not scoffing any longer. Granted, it is not structural. You can’t weld a bridge, skyscraper, or engine mounts to a car frame. But you can weld steel up to 3/16ths, which is thick enough to make furniture, wrought iron gates, and bad art.</p>\n\n<p>The beauty of the small Lincoln welders is they are light and portable. And when you get to wherever you are going, you can plug them into a standard 110-volt 20-amp outlet. If you use the flux core kit, you don’t even have to carry around a tank of compressed shielding gas.</p>\n\n<p>This article is not a replacement for the manual or the many excellent books devoted to welding. This is a primer to explain the process and show how you can be a welder by the end of the weekend.</p><div class=\"tools\"><strong>Tools</strong><ul><li><a href=\"http://makeprojects.com/Item/Diagonal_cutters\">Diagonal cutters</a></li><li><a href=\"http://makeprojects.com/Item/Gloves\">Gloves</a></li><li><a href=\"http://makeprojects.com/Item/LCD_welding_helmet\">LCD welding helmet</a></li><li><a href=\"http://makeprojects.com/Item/Lincoln_SP-135_Plus_Wire-Feed_Welder\">Lincoln SP-135 Plus Wire-Feed Welder</a></li></ul></div>",
+    "locale": "en",
+    "parts": [],
+    "prereqs": [],
+    "steps": [
+      {
+        "title": "A few things before we get started:",
+        "lines": [
+          {
+            "text": "Read about <a href=\"/Info/Flux_Core_%28FCAW%29_vs._Shielded_Gas_Welding_%28MIG%29\">Flux Core (FCAW) vs. Shielded Gas Welding (MIG)</a>",
+            "text_raw": "Read about [[Flux Core (FCAW) vs. Shielded Gas Welding (MIG)]]",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Read <a href=\"/Info/How_the_Lincoln_Works\">How the Lincoln Works</a>",
+            "text_raw": "Read [[How the Lincoln Works]]",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Welding is dangerous! RTFM and see <a href=\"http://aws.org/technical/facts/index.html\" rel=\"nofollow\">American Welding Society</a> to learn about hazards from fumes to pacemaker risks to dropping something on your foot!",
+            "text_raw": "Welding is dangerous! RTFM and see [http://aws.org/technical/facts/index.html|American Welding Society] to learn about hazards from fumes to pacemaker risks to dropping something on your foot!",
+            "bullet": "icon_caution",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 124,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/padGgH4TMrNTkCKb"
+          },
+          {
+            "imageid": 128,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/GoIZVi1i2DVp2fL4"
+          }
+        ],
+        "number": 1
+      },
+      {
+        "title": "Just two dials.",
+        "lines": [
+          {
+            "text": "Note the dials adjust the speed of wire and amperage. Inside the welder side panel, there is a handy cheat sheet with wire speed and amperage (heat) recommendations for different thicknesses of metal.",
+            "text_raw": "Note the dials adjust the speed of wire and amperage. Inside the welder side panel, there is a handy cheat sheet with wire speed and amperage (heat) recommendations for different thicknesses of metal.",
+            "bullet": "icon_note",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 123,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/HIYW2E6YfMOp6SVK"
+          },
+          {
+            "imageid": 127,
+            "orderby": 2,
+            "text": "http://guide-images.makeprojects.org/igi/pwgNmCGboktVIRGs"
+          }
+        ],
+        "number": 2
+      },
+      {
+        "title": "Practice \"trim stick-out.\"",
+        "lines": [
+          {
+            "text": "The distance between the welding gun and wire end is called &quot;stick-out&quot;. Squeeze the trigger and run the wire out an inch or two.",
+            "text_raw": "The distance between the welding gun and wire end is called \"stick-out\". Squeeze the trigger and run the wire out an inch or two.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Be careful! When the trigger is depressed the wire is energized and will weld to any grounded metal.",
+            "text_raw": "Be careful! When the trigger is depressed the wire is energized and will weld to any grounded metal.",
+            "bullet": "icon_caution",
+            "level": 0
+          },
+          {
+            "text": "Without touching the trigger, trim the wire stick-out to 3/8” beyond the copper gun tip.",
+            "text_raw": "Without touching the trigger, trim the wire stick-out to 3/8” beyond the copper gun tip.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 125,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/a51R6w1ConWdLH5u"
+          }
+        ],
+        "number": 3
+      },
+      {
+        "title": "Practice tack welds",
+        "lines": [
+          {
+            "text": "Tack welds are small, temporary spot welds that hold the metal together until you lay the final welding bead.",
+            "text_raw": "Tack welds are small, temporary spot welds that hold the metal together until you lay the final welding bead.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "I am welding a pretty thick piece of metal (1” steel angle to a 6” steel plate) so I set the welder to G-3. The G represents welding amperage or heat and the 3 is the speed the wire is fed from the gun.",
+            "text_raw": "I am welding a pretty thick piece of metal (1” steel angle to a 6” steel plate) so I set the welder to G-3. The G represents welding amperage or heat and the 3 is the speed the wire is fed from the gun.",
+            "bullet": "icon_note",
+            "level": 0
+          },
+          {
+            "text": "Hold the gun tip at a 45-degree angle to the corner joint.",
+            "text_raw": "Hold the gun tip at a 45-degree angle to the corner joint.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Touch the wire to the work.",
+            "text_raw": "Touch the wire to the work.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 126,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/uOwviCtOsPTsJZxU"
+          }
+        ],
+        "number": 4
+      },
+      {
+        "title": "Practice a weld.",
+        "lines": [
+          {
+            "text": "With the wire touching the work, your gun is 3/8” from the work. As the wire feeds, there is a natural tendency to follow right into the weld and dip your gun tip in the molten pool. Don’t do that! When you pull the trigger, keep the gun at 3/8” from the weld.",
+            "text_raw": "With the wire touching the work, your gun is 3/8” from the work. As the wire feeds, there is a natural tendency to follow right into the weld and dip your gun tip in the molten pool. Don’t do that! When you pull the trigger, keep the gun at 3/8” from the weld.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Make sure your welding hood is turned on! Make sure your welding area is clean and non-flammable as the sparks are going to fly! Make sure ground clamp is attached to the work.",
+            "text_raw": "Make sure your welding hood is turned on! Make sure your welding area is clean and non-flammable as the sparks are going to fly! Make sure ground clamp is attached to the work.",
+            "bullet": "icon_caution",
+            "level": 0
+          },
+          {
+            "text": "Squeeze trigger. Release trigger.",
+            "text_raw": "Squeeze trigger. Release trigger.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "How long? The puny weld on the left is about 1/2 second, while the whopper on the right is about 2 seconds. About 1 second seems right.",
+            "text_raw": "How long? The puny weld on the left is about 1/2 second, while the whopper on the right is about 2 seconds. About 1 second seems right.",
+            "bullet": "black",
+            "level": 1
+          },
+          {
+            "text": "Re-trim the stick-out between each weld.",
+            "text_raw": "Re-trim the stick-out between each weld.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "TIP: To keep from burning your house down, make sure your work area is swept clean of flammables and make sure you’re standing on dry ground. Even if your rose garden or wood pile is eight feet away, sprinkle it with water, because sparks fly. Ideally, a steel welding table is swell, but that is a future welding project for you.  A stack of bricks will work for now.",
+            "text_raw": "TIP: To keep from burning your house down, make sure your work area is swept clean of flammables and make sure you’re standing on dry ground. Even if your rose garden or wood pile is eight feet away, sprinkle it with water, because sparks fly. Ideally, a steel welding table is swell, but that is a future welding project for you.  A stack of bricks will work for now.",
+            "bullet": "icon_reminder",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 161,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/OvPOjMCRPFUlBvOL"
+          }
+        ],
+        "number": 5
+      },
+      {
+        "title": "Weld beads.",
+        "lines": [
+          {
+            "text": "Now try welding some final beads. As opposed to small tack welds, a bead is a continuous line of welded metal.",
+            "text_raw": "Now try welding some final beads. As opposed to small tack welds, a bead is a continuous line of welded metal.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "According to the cheat sheet, this 6” steel should be welded at G-3, but I drew sample lines at other voltage and wire speed settings to gauge the effects of different settings.",
+            "text_raw": "According to the cheat sheet, this 6” steel should be welded at G-3, but I drew sample lines at other voltage and wire speed settings to gauge the effects of different settings.",
+            "bullet": "black",
+            "level": 1
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 122,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/uyfgCoeKh2NRAGUc"
+          }
+        ],
+        "number": 6
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "If you’re right-handed, weld beads from left to right. Angle the gun slightly toward from the direction of travel at about 45° from the work. Remember to trim the stick-out before every weld.",
+            "text_raw": "If you’re right-handed, weld beads from left to right. Angle the gun slightly toward from the direction of travel at about 45° from the work. Remember to trim the stick-out before every weld.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Before you pull the trigger, run the gun over the path a couple times to make sure you are comfortable and you are not going to run into anything.",
+            "text_raw": "Before you pull the trigger, run the gun over the path a couple times to make sure you are comfortable and you are not going to run into anything.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Pull trigger with your dominant hand, brace with the other, and weld away from you, so you can watch behind the weld and see how it’s going. Move gun from left to right. The correct speed depends on the material, the wire, the heat, the wire speed, and your skill. In time, you can watch the weld and figure out if you are going too fast or too slow, but to start, try moving along at about 1/4&quot; per second.",
+            "text_raw": "Pull trigger with your dominant hand, brace with the other, and weld away from you, so you can watch behind the weld and see how it’s going. Move gun from left to right. The correct speed depends on the material, the wire, the heat, the wire speed, and your skill. In time, you can watch the weld and figure out if you are going too fast or too slow, but to start, try moving along at about 1/4\" per second.",
+            "bullet": "icon_note",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 121,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/FlePUnc4wBFUC1yo"
+          }
+        ],
+        "number": 7
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "How did it go? Flux core welding can be a messy operation that creates lots of little metal droplets called spatter. And the weld is partially covered with slag. Scrub and pick the beads with a wire brush to get them as clean as is practical.",
+            "text_raw": "How did it go? Flux core welding can be a messy operation that creates lots of little metal droplets called spatter. And the weld is partially covered with slag. Scrub and pick the beads with a wire brush to get them as clean as is practical.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Does your weld have lots of little bubbles, skipped spots, or is it just too thin? That was too fast.",
+            "text_raw": "Does your weld have lots of little bubbles, skipped spots, or is it just too thin? That was too fast.",
+            "bullet": "black",
+            "level": 0
+          },
+          {
+            "text": "Is the weld really wide and with a high crown? Too slow.",
+            "text_raw": "Is the weld really wide and with a high crown? Too slow.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 120,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/nH3dOqONB1qHsJYC"
+          }
+        ],
+        "number": 8
+      },
+      {
+        "title": "",
+        "lines": [
+          {
+            "text": "The ideal bead is a perfect union of the wire (filler material) and the work (base material). Through experimentation, you can find the right amperage, wire feed speed, and the rate that you move the gun over the metal.",
+            "text_raw": "The ideal bead is a perfect union of the wire (filler material) and the work (base material). Through experimentation, you can find the right amperage, wire feed speed, and the rate that you move the gun over the metal.",
+            "bullet": "black",
+            "level": 0
+          }
+        ],
+        "object": null,
+        "images": [
+          {
+            "imageid": 130,
+            "orderby": 1,
+            "text": "http://guide-images.makeprojects.org/igi/YbqpPCKMNnHMlMTg"
+          }
+        ],
+        "number": 9
+      }
+    ],
+    "subject": "",
+    "summary": "You can be a welder by the end of the weekend.",
+    "time_required": "3 hours",
+    "title": "Welding Primer",
+    "tools": [
+      {
+        "text": "Diagonal cutters",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Diagonal_cutters",
+        "thumbnail": ""
+      },
+      {
+        "text": "Gloves",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Gloves",
+        "thumbnail": ""
+      },
+      {
+        "text": "LCD welding helmet",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/LCD_welding_helmet",
+        "thumbnail": ""
+      },
+      {
+        "text": "Lincoln SP-135 Plus Wire-Feed Welder",
+        "notes": "",
+        "url": "http://makeprojects.com/Item/Lincoln_SP-135_Plus_Wire-Feed_Welder",
+        "thumbnail": ""
+      }
+    ],
+    "type": "technique"
+  },
+  "guideid": "2"
+}

@@ -1,0 +1,724 @@
+{
+	"device": "Photography",
+	"url": "http://makeprojects.com/Project/USB+Webcam+Microscope/963/1",
+	"guide": {
+		"author": {
+			"text": "Paul Spinrad",
+			"userid": 10
+		},
+		"categories": [
+			"Photography",
+			"Hacks and Mods"
+		],
+		"conclusion": "<p><em>Adapted from a project by Mike Davis of HTINK</em></p>",
+		"difficulty": "Moderate",
+		"documents": [],
+		"flags": [
+			{
+				"title": "Weekend Project",
+				"flagid": "GUIDE_SPONSOR_RADIO_SHACK",
+				"text": "This project is part of RadioShack's The Great Create."
+			}
+		],
+		"guideid": 963,
+		"image": {
+			"imageid": 17869,
+			"text": "http://guide-images.makeprojects.org/igi/rv3pBY21Hb3AJVOF"
+		},
+		"introduction": "<p>Here's a fun, relatively easy way to graft a USB webcam onto a RadioShack pocket illuminated microscope, which can then be used for capturing vivid micro-scale stills and video. You can use a new webcam, or repurpose a leftover from the era when computer cameras weren't built-in. Your 'scope will be completely USB-powered; no batteries required.</p>\n\n<p>Check out more <a href=\"http://makeprojects.com/Info/Weekend_Projects\">Weekend Projects</a>.</p>",
+		"introduction_rendered": "<p>Here's a fun, relatively easy way to graft a USB webcam onto a RadioShack pocket illuminated microscope, which can then be used for capturing vivid micro-scale stills and video. You can use a new webcam, or repurpose a leftover from the era when computer cameras weren't built-in. Your 'scope will be completely USB-powered; no batteries required.</p>\n\n<p>Check out more <a href=\"http://makeprojects.com/Info/Weekend_Projects\">Weekend Projects</a>.</p><div class=\"parts\"><strong>Relevant parts</strong><ul><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=4460011\">Web Camera</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2179604\">Illuminated microscope</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3060980\">LED White</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062642\">Wire Insulated</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=12515226\">Heat-shrink tubing</a></li><li><a href=\"http://make.dozuki.com/Item/Computer\">Computer</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=2062722\">Solder, lead-free</a></li><li><a href=\"http://make.dozuki.com/Item/Hot_glue\">Hot glue</a></li><li><a href=\"http://make.dozuki.com/Item/Magnets\">Magnets</a></li><li><a href=\"http://make.dozuki.com/Item/Scrap_of_sheet_metal\">Scrap of sheet metal</a></li></ul></div><div class=\"tools\"><strong>Tools</strong><ul><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=12573439&amp;amp;retainProdsInSession=1\">Heat gun</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=12710568\">Hobby knife</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=12621825\">Hot glue gun</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3932531\">Pliers</a></li><li><a href=\"http://make.dozuki.com/Item/Screwdriver\">Screwdriver</a></li><li><a href=\"http://make.dozuki.com/Item/Screwdriver\">Screwdriver</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3086619\">Soldering iron</a></li><li><a href=\"http://www.radioshack.com/product/index.jsp?productId=3932543\">Wire cutter/stripper</a></li></ul></div>",
+		"locale": "en",
+		"parts": [
+			{
+				"text": "Web Camera",
+				"notes": "from RadioShack. Logitech C210 or use any other USB webcam.",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=4460011",
+				"thumbnail": ""
+			},
+			{
+				"text": "Illuminated microscope",
+				"notes": "from RadioShack.",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=2179604",
+				"thumbnail": ""
+			},
+			{
+				"text": "LED White",
+				"notes": "from RadioShack.",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=3060980",
+				"thumbnail": ""
+			},
+			{
+				"text": "Wire Insulated",
+				"notes": "from RadioShack.",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=2062642",
+				"thumbnail": ""
+			},
+			{
+				"text": "Heat-shrink tubing",
+				"notes": "from RadioSahck, or electrical tape.",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=12515226",
+				"thumbnail": ""
+			},
+			{
+				"text": "Computer",
+				"notes": "with USB port and operating system compatible with webcam (Windows).",
+				"url": "http://make.dozuki.com/Item/Computer",
+				"thumbnail": ""
+			},
+			{
+				"text": "Solder, lead-free",
+				"notes": "from RadioShack.",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=2062722",
+				"thumbnail": ""
+			},
+			{
+				"text": "Hot glue",
+				"notes": "one stick is plenty.",
+				"url": "http://make.dozuki.com/Item/Hot_glue",
+				"thumbnail": ""
+			},
+			{
+				"text": "Magnets",
+				"notes": "small Neodymium magnets.",
+				"url": "http://make.dozuki.com/Item/Magnets",
+				"thumbnail": ""
+			},
+			{
+				"text": "Scrap of sheet metal",
+				"notes": "to act as a base.",
+				"url": "http://make.dozuki.com/Item/Scrap_of_sheet_metal",
+				"thumbnail": ""
+			}
+		],
+		"prereqs": [],
+		"steps": [
+			{
+				"title": "Open the microscope case",
+				"lines": [
+					{
+						"text": "Slide the clear plastic stand off of the microscope.",
+						"text_raw": "Slide the clear plastic stand off of the microscope.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Unscrew the 2 small Phillips screws that hold the case together and set them aside someplace safe.",
+						"text_raw": "Unscrew the 2 small Phillips screws that hold the case together and set them aside someplace safe.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Pry apart the two halves of case.",
+						"text_raw": "Pry apart the two halves of case.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Watch out for the small gray power switch slider, which has a tendency to spring away. Put your hand over the switch to block its flight as you separate the case halves.",
+						"text_raw": "Watch out for the small gray power switch slider, which has a tendency to spring away. Put your hand over the switch to block its flight as you separate the case halves.",
+						"bullet": "icon_note",
+						"level": 1
+					},
+					{
+						"text": "Lift out the zoom and focus elements and put them someplace safe.",
+						"text_raw": "Lift out the zoom and focus elements and put them someplace safe.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17775,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/yDVCxFjJMCImyogL"
+					},
+					{
+						"imageid": 17742,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/oVAfqF2hi2j2EM6i"
+					},
+					{
+						"imageid": 17744,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/GZmnSLfLVlvbwEZf"
+					}
+				],
+				"number": 1
+			},
+			{
+				"title": "Remove the microscope light and battery parts",
+				"lines": [
+					{
+						"text": "Use pliers to pull all of the metal parts out of the case, along with the small lightbulb.",
+						"text_raw": "Use pliers to pull all of the metal parts out of the case, along with the small lightbulb.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Bend battery springs outward to make them easier to grip with pliers.",
+						"text_raw": "Bend battery springs outward to make them easier to grip with pliers.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17746,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/PH1lmS3CVrAYbMJ5"
+					},
+					{
+						"imageid": 17748,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/yWBjWNB3GByj2Qgc"
+					},
+					{
+						"imageid": 17749,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/cI2PnoZsQjKlj3h5"
+					}
+				],
+				"number": 2
+			},
+			{
+				"title": "Wire the USB-powered LED",
+				"lines": [
+					{
+						"text": "Trim the two wire leads of the LED so that its dome fits into the empty case half where the lightbulb used to sit. Cut the lengths so that the longer one (the anode, or + side) remains longer.",
+						"text_raw": "Trim the two wire leads of the LED so that its dome fits into the empty case half where the lightbulb used to sit. Cut the lengths so that the longer one (the anode, or + side) remains longer.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Note that the LED's cathode side is also marked by a flat area along the bottom edge of of the plastic dome.",
+						"text_raw": "Note that the LED's cathode side is also marked by a flat area along the bottom edge of of the plastic dome.",
+						"bullet": "icon_note",
+						"level": 1
+					},
+					{
+						"text": "Cut two 6&quot; pieces of 30 gauge wire and strip 1/2&quot; of insulation off of both ends.",
+						"text_raw": "Cut two 6\" pieces of 30 gauge wire and strip 1/2\" of insulation off of both ends.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "30 gauge wire is sometimes fine enough to strip just with your fingernails.",
+						"text_raw": "30 gauge wire is sometimes fine enough to strip just with your fingernails.",
+						"bullet": "icon_note",
+						"level": 1
+					},
+					{
+						"text": "Twist one end of each wire piece around a leg of the LED and solder the wires in place. Use a pen or tape to mark the free end of the wire that connects to the LED's anode.",
+						"text_raw": "Twist one end of each wire piece around a leg of the LED and solder the wires in place. Use a pen or tape to mark the free end of the wire that connects to the LED's anode.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Cut two 1&quot; pieces of heat shrink tubing and slide them over the wires to cover the solder joints. Use a heat gun, hair dryer, or lighter to shrink the tubing.",
+						"text_raw": "Cut two 1\" pieces of heat shrink tubing and slide them over the wires to cover the solder joints. Use a heat gun, hair dryer, or lighter to shrink the tubing.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "If you use a lighter, hold and rotate the solder joint just under or next to the flame, not over it.",
+						"text_raw": "If you use a lighter, hold and rotate the solder joint just under or next to the flame, not over it.",
+						"bullet": "icon_note",
+						"level": 1
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17679,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/N6WjtrpmwoojSoOW"
+					},
+					{
+						"imageid": 17683,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/pgJXeqZxGm6FaHxh"
+					},
+					{
+						"imageid": 17691,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/PGspTPTqehkft63X"
+					}
+				],
+				"number": 3
+			},
+			{
+				"title": "Install the LED",
+				"lines": [
+					{
+						"text": "Hot-glue the LED in place inside of the microscope case half.",
+						"text_raw": "Hot-glue the LED in place inside of the microscope case half.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Use a hobby knife to make a small notch along the top seam of the case half, just large enough to accommodate the two wires.",
+						"text_raw": "Use a hobby knife to make a small notch along the top seam of the case half, just large enough to accommodate the two wires.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Thread the wires back and up through the empty battery compartment, then out of the small notch. Tack them in place along the way with dots of hot glue.",
+						"text_raw": "Thread the wires back and up through the empty battery compartment, then out of the small notch. Tack them in place along the way with dots of hot glue.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17697,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/b1xMjXlt5ZNDBgJN"
+					},
+					{
+						"imageid": 17701,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/YO4fnOrcnhRK3qYA"
+					},
+					{
+						"imageid": 17703,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/bqc1MonLMPsDXjWE"
+					}
+				],
+				"number": 4
+			},
+			{
+				"title": "Uncase the webcam",
+				"lines": [
+					{
+						"text": "Use a small Phillips screwdriver to unscrew the 2 screws in the back of the webcam case.",
+						"text_raw": "Use a small Phillips screwdriver to unscrew the 2 screws in the back of the webcam case.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Pry open the plastic case and unscrew 2 more screws inside that attach the rectangular printed circuit board (PCB) to the back half of the case. Lift out the PCB.",
+						"text_raw": "Pry open the plastic case and unscrew 2 more screws inside that attach the rectangular printed circuit board (PCB) to the back half of the case. Lift out the PCB.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Unscrew another pair of screws that secures the USB cord to the back half of the case.",
+						"text_raw": "Unscrew another pair of screws that secures the USB cord to the back half of the case.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "On the component side of the PCB, unplug the white 4-wire header from the white connector.",
+						"text_raw": "On the component side of the PCB, unplug the white 4-wire header from the white connector.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17704,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/NckwWxaKhAXuvNV5"
+					},
+					{
+						"imageid": 17708,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/jFB4IeQEHLTITt1U"
+					},
+					{
+						"imageid": 17719,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/1vU5LFku2ydPgNCs"
+					}
+				],
+				"number": 5
+			},
+			{
+				"title": "Uncase the webcam (continued)",
+				"lines": [
+					{
+						"text": "On the lens side of the PCB, lay some desoldering braid on top of the pad that attaches the thick black ground wire (marked &quot;J2&quot; on the component side).",
+						"text_raw": "On the lens side of the PCB, lay some desoldering braid on top of the pad that attaches the thick black ground wire (marked \"J2\" on the component side).",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Press down onto the braid with a soldering iron to wick the solder away. Pull the ground wire off of the PCB; with almost all of the solder gone, it should now break away fairly easily. Cut the small metal cuff off of the wire.",
+						"text_raw": "Press down onto the braid with a soldering iron to wick the solder away. Pull the ground wire off of the PCB; with almost all of the solder gone, it should now break away fairly easily. Cut the small metal cuff off of the wire.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Pull the back of the webcam case off of the USB cord. The board should now be completely detached from the USB cord now just terminates with the small 4-pin header and the black wire. The PCB is completely detached.",
+						"text_raw": "Pull the back of the webcam case off of the USB cord. The board should now be completely detached from the USB cord now just terminates with the small 4-pin header and the black wire. The PCB is completely detached.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Pull the small, round microphone out of the case and remove its rubber cushion. Hot glue it to the component side of the PCB, with its plain black side facing up.",
+						"text_raw": "Pull the small, round microphone out of the case and remove its rubber cushion. Hot glue it to the component side of the PCB, with its plain black side facing up.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17720,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/DiqkbFVamIC1Ximv"
+					},
+					{
+						"imageid": 17722,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/MyAOuVfBELqAB5NP"
+					},
+					{
+						"imageid": 17725,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/HmDbHESTsSG2fO1H"
+					}
+				],
+				"number": 6
+			},
+			{
+				"title": "Adjust the webcam lens",
+				"lines": [
+					{
+						"text": "Look closely around the sides of the black plastic ring that carries the webcam's lens. Locate the bit of hot glue that holds the lens ring in position. Use a hobby knife to carefully cut or pry this blob away.",
+						"text_raw": "Look closely around the sides of the black plastic ring that carries the webcam's lens. Locate the bit of hot glue that holds the lens ring in position. Use a hobby knife to carefully cut or pry this blob away.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Unscrew the webcam lens ring until it comes off, then screw it back on just a little bit, 1/2 turn more than the point at which the lens doesn't fall off. This maximizes the focal distance, to produce a larger image.",
+						"text_raw": "Unscrew the webcam lens ring until it comes off, then screw it back on just a little bit, 1/2 turn more than the point at which the lens doesn't fall off. This maximizes the focal distance, to produce a larger image.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17728,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/XDTVNtPH2INVGaOF"
+					},
+					{
+						"imageid": 17729,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/EPr2NAGjxUPOjBBb"
+					},
+					{
+						"imageid": 17730,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/TMsgm154bfZ4BlwS"
+					}
+				],
+				"number": 7
+			},
+			{
+				"title": "Wire the ground and power connections",
+				"lines": [
+					{
+						"text": "Strip 1/4&quot; of insulation off the end of the thick black ground wire from the USB cable.",
+						"text_raw": "Strip 1/4\" of insulation off the end of the thick black ground wire from the USB cable.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Spread the exposed strands of the stripped wire and cut about half of them away.",
+						"text_raw": "Spread the exposed strands of the stripped wire and cut about half of them away.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Use a knife to cut the red wire from the USB cable to the 4-wire header, halfway down.",
+						"text_raw": "Use a knife to cut the red wire from the USB cable to the 4-wire header, halfway down.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Carefully strip about 1/4&quot; from each cut end of the red wire.",
+						"text_raw": "Carefully strip about 1/4\" from each cut end of the red wire.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "It sometimes works better to strip delicate stranded wire like this with a sharp knife rather than with wire strippers. Carefully slice through the insulation lengthwise, then pry out the wire strands and cut away the rest of the insulation.",
+						"text_raw": "It sometimes works better to strip delicate stranded wire like this with a sharp knife rather than with wire strippers. Carefully slice through the insulation lengthwise, then pry out the wire strands and cut away the rest of the insulation.",
+						"bullet": "black",
+						"level": 1
+					},
+					{
+						"text": "Twist the remaining strands of the ground wire together with the free end of wire from the LED cathode (the side that isn't the anode).",
+						"text_raw": "Twist the remaining strands of the ground wire together with the free end of wire from the LED cathode (the side that isn't the anode).",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Twist together the stripped ends of the red wire together with the free end of wire from the LED anode.",
+						"text_raw": "Twist together the stripped ends of the red wire together with the free end of wire from the LED anode.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17731,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/sMfbxgfY5Rw53yJQ"
+					},
+					{
+						"imageid": 17732,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/GORpQ2ap3TB36L4O"
+					},
+					{
+						"imageid": 17751,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/N23d6biLuhgaPTla"
+					}
+				],
+				"number": 8
+			},
+			{
+				"title": "Wire the power and ground connections (continued)",
+				"lines": [
+					{
+						"text": "Solder the two red and one LED anode wire ends together and insulate the joint with heat shrink tubing.",
+						"text_raw": "Solder the two red and one LED anode wire ends together and insulate the joint with heat shrink tubing.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Plug the white header back into the connector on the webcam PCB.",
+						"text_raw": "Plug the white header back into the connector on the webcam PCB.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Solder the USB ground and LED cathode wires back into the webcam PCB hole labeled J2.",
+						"text_raw": "Solder the USB ground and LED cathode wires back into the webcam PCB hole labeled J2.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17756,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/nBK15ScvdW11WZOt"
+					},
+					{
+						"imageid": 17776,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/jWIfv3pXh2NuNqhD"
+					},
+					{
+						"imageid": 17762,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/uOEQ4LAvGDim6JyR"
+					}
+				],
+				"number": 9
+			},
+			{
+				"title": "Attach the webcam lens to the microscope eyepiece",
+				"lines": [
+					{
+						"text": "Remove the flexible rubber eye cap from the microscope's zoom element.",
+						"text_raw": "Remove the flexible rubber eye cap from the microscope's zoom element.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Seat the zoom element back in the case half, making sure it's rotated in the proper position. The grey ring should stick fully out of its hole, and a small notch in the sliding black ring should fit over a vertical ridge in the inside of the case.",
+						"text_raw": "Seat the zoom element back in the case half, making sure it's rotated in the proper position. The grey ring should stick fully out of its hole, and a small notch in the sliding black ring should fit over a vertical ridge in the inside of the case.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Mark the zoom element's position in the case by using a knife to nick two points around the perimeter of the eyepiece that are closest to the case seam.",
+						"text_raw": "Mark the zoom element's position in the case by using a knife to nick two points around the perimeter of the eyepiece that are closest to the case seam.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Remove the zoom element and hold its eyepiece centered up against the webcam's lens ring (conveniently enough, these two pieces are the same diameter). Orient the webcam PCB so that its length will run parallel to the microscope case seam; the project will look nicer if the PCB and microscope line up.",
+						"text_raw": "Remove the zoom element and hold its eyepiece centered up against the webcam's lens ring (conveniently enough, these two pieces are the same diameter). Orient the webcam PCB so that its length will run parallel to the microscope case seam; the project will look nicer if the PCB and microscope line up.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Hot glue around the webcam lens ring and microscope eyepiece to hold the two together.",
+						"text_raw": "Hot glue around the webcam lens ring and microscope eyepiece to hold the two together.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17760,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/FakL12Y4XIZ4RGwQ"
+					},
+					{
+						"imageid": 17777,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/AZADAEuhPTTjVdHa"
+					},
+					{
+						"imageid": 17779,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/wFYlAWBQgQHlZx6e"
+					}
+				],
+				"number": 10
+			},
+			{
+				"title": "Reassemble the microscope",
+				"lines": [
+					{
+						"text": "Replace the zoom element, now with the webcam PCB attached, back in the microscope case half. Again, make sure it's seated properly.",
+						"text_raw": "Replace the zoom element, now with the webcam PCB attached, back in the microscope case half. Again, make sure it's seated properly.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Seat the microscope's focus element back in the case half, making sure that the grey ring sticks fully out of its hole and that the tab at the top of the inner cylinder fits into the channel running down the inside of the case.",
+						"text_raw": "Seat the microscope's focus element back in the case half, making sure that the grey ring sticks fully out of its hole and that the tab at the top of the inner cylinder fits into the channel running down the inside of the case.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Replace the other case half and screw the case back together with the two screws.",
+						"text_raw": "Replace the other case half and screw the case back together with the two screws.",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Slide the plastic base back onto the bottom of the case. You're done!",
+						"text_raw": "Slide the plastic base back onto the bottom of the case. You're done!",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17862,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/KR6nLsY23bIxmnwD"
+					},
+					{
+						"imageid": 17859,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/JJRWRskuPm6nZPD2"
+					},
+					{
+						"imageid": 17868,
+						"orderby": 3,
+						"text": "http://guide-images.makeprojects.org/igi/Wj2wDXWTVHKloNGa"
+					}
+				],
+				"number": 11
+			},
+			{
+				"title": "Scope it out",
+				"lines": [
+					{
+						"text": "If you haven't already, install your webcam's software on your computer (if needed).",
+						"text_raw": "If you haven't already, install your webcam's software on your computer (if needed).",
+						"bullet": "black",
+						"level": 0
+					},
+					{
+						"text": "Plug your DIY USB microscope into your computer, launch the webcam software (or any other software that uses a webcam), and enjoy!  Snap photos, shoot video, and videoconference from the land of the very small.",
+						"text_raw": "Plug your DIY USB microscope into your computer, launch the webcam software (or any other software that uses a webcam), and enjoy!  Snap photos, shoot video, and videoconference from the land of the very small.",
+						"bullet": "black",
+						"level": 0
+					}
+				],
+				"object": null,
+				"images": [
+					{
+						"imageid": 17870,
+						"orderby": 1,
+						"text": "http://guide-images.makeprojects.org/igi/tWqe3uTViuNTDo6o"
+					},
+					{
+						"imageid": 17872,
+						"orderby": 2,
+						"text": "http://guide-images.makeprojects.org/igi/caQA1E1irvKZgcNT"
+					}
+				],
+				"number": 12
+			}
+		],
+		"subject": "",
+		"summary": "Convert a webcam into a fun USB microscope",
+		"time_required": "1-2 hours",
+		"title": "USB Webcam Microscope",
+		"tools": [
+			{
+				"text": "Heat gun",
+				"notes": "hair dryer or pocket lighter.",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=12573439&amp;retainProdsInSession=1",
+				"thumbnail": ""
+			},
+			{
+				"text": "Hobby knife",
+				"notes": "such as X-Acto",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=12710568",
+				"thumbnail": ""
+			},
+			{
+				"text": "Hot glue gun",
+				"notes": "",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=12621825",
+				"thumbnail": ""
+			},
+			{
+				"text": "Pliers",
+				"notes": "",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=3932531",
+				"thumbnail": ""
+			},
+			{
+				"text": "Screwdriver",
+				"notes": "for disassembling microscope.",
+				"url": "http://make.dozuki.com/Item/Screwdriver",
+				"thumbnail": ""
+			},
+			{
+				"text": "Screwdriver",
+				"notes": "for disassembling webcam.",
+				"url": "http://make.dozuki.com/Item/Screwdriver",
+				"thumbnail": ""
+			},
+			{
+				"text": "Soldering iron",
+				"notes": "",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=3086619",
+				"thumbnail": ""
+			},
+			{
+				"text": "Wire cutter/stripper",
+				"notes": "",
+				"url": "http://www.radioshack.com/product/index.jsp?productId=3932543",
+				"thumbnail": ""
+			}
+		],
+		"type": "project"
+	},
+	"guideid": "963"
+}
